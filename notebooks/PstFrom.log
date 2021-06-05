@@ -1,233 +1,211 @@
-2021-06-02 23:06:44.136712 starting: opening PstFrom.log for logging
-2021-06-02 23:06:44.136712 starting PstFrom process
-2021-06-02 23:06:44.141700 starting: setting up dirs
-2021-06-02 23:06:44.142695 starting: removing existing new_d '..\hagfors_ss_template'
-2021-06-02 23:06:44.166631 finished: removing existing new_d '..\hagfors_ss_template' took: 0:00:00.023936
-2021-06-02 23:06:44.166631 starting: copying original_d '..\temp_ss_pst_from' to new_d '..\hagfors_ss_template'
-2021-06-02 23:06:44.299276 finished: copying original_d '..\temp_ss_pst_from' to new_d '..\hagfors_ss_template' took: 0:00:00.132645
-2021-06-02 23:06:44.301271 finished: setting up dirs took: 0:00:00.159571
-2021-06-02 23:07:29.437887 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt']
-2021-06-02 23:07:29.439882 WARNING: 0) Inconsistency between geostruct transform and partrans.
-2021-06-02 23:07:29.439882 WARNING: 1) Setting geostruct transform to log
-2021-06-02 23:07:29.439882 WARNING: -) Better to pass an appropriately transformed geostruct
-2021-06-02 23:07:29.439882 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt
-2021-06-02 23:07:29.487263 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt took: 0:00:00.047381
-2021-06-02 23:07:29.487263 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer1.txt' of shape (234, 380)
-2021-06-02 23:07:29.574031 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl'
-2021-06-02 23:07:29.575230 starting: writing template file ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl for ['npf_k_layer1_gr_inst:0']
-2021-06-02 23:07:29.576221 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
-2021-06-02 23:07:30.411905 finished: writing template file ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl for ['npf_k_layer1_gr_inst:0'] took: 0:00:00.836675
-2021-06-02 23:07:30.412902 finished: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl' took: 0:00:00.838871
-2021-06-02 23:07:30.412902 saving zone array ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl
-2021-06-02 23:07:30.585441 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt'] took: 0:00:01.147554
-2021-06-02 23:07:30.585441 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt']
-2021-06-02 23:07:30.586438 WARNING: 0) Inconsistency between geostruct transform and partrans.
-2021-06-02 23:07:30.586438 WARNING: 1) Setting geostruct transform to log
-2021-06-02 23:07:30.586438 WARNING: -) Better to pass an appropriately transformed geostruct
-2021-06-02 23:07:30.587435 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt
-2021-06-02 23:07:30.665228 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt took: 0:00:00.077793
-2021-06-02 23:07:30.666224 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer1.txt' of shape (234, 380)
-2021-06-02 23:07:30.775441 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_pp_inst0_pilotpoints.csv.tpl'
-2021-06-02 23:07:30.775441 starting: setting up pilot point parameters
-2021-06-02 23:07:30.776438 No spatial reference (containing cell spacing) passed.
-2021-06-02 23:07:30.776438 OK - using spatial reference in parent object.
-2021-06-02 23:07:35.444073 2602 pilot point parameters created
-2021-06-02 23:07:35.444073 pilot point 'pargp':npf_k_layer1_pp_inst:0
-2021-06-02 23:07:35.445068 finished: setting up pilot point parameters took: 0:00:04.669627
-2021-06-02 23:07:36.201046 starting: calculating factors for pargp=npf_k_layer1_pp_inst:0
-2021-06-02 23:07:36.202042 saving krige variance file:..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.var.dat
-2021-06-02 23:07:36.202042 saving krige factors file:..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.fac
-2021-06-02 23:12:06.993361 finished: calculating factors for pargp=npf_k_layer1_pp_inst:0 took: 0:04:30.792315
-2021-06-02 23:12:06.994377 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.dat.tpl'
-2021-06-02 23:12:06.994377 saving zone array ..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.dat.tpl
-2021-06-02 23:12:07.033302 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt'] took: 0:04:36.447861
-2021-06-02 23:12:07.113156 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt']
-2021-06-02 23:12:07.113156 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt
-2021-06-02 23:12:07.173306 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt took: 0:00:00.060150
-2021-06-02 23:12:07.183368 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer2.txt' of shape (234, 380)
-2021-06-02 23:12:07.303042 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl'
-2021-06-02 23:12:07.303042 starting: writing template file ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl for ['npf_k_layer2_gr_inst:0']
-2021-06-02 23:12:07.303042 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
-2021-06-02 23:12:08.383258 finished: writing template file ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl for ['npf_k_layer2_gr_inst:0'] took: 0:00:01.080216
-2021-06-02 23:12:08.383258 finished: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl' took: 0:00:01.080216
-2021-06-02 23:12:08.383258 saving zone array ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl
-2021-06-02 23:12:08.573396 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt'] took: 0:00:01.460240
-2021-06-02 23:12:08.573396 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt']
-2021-06-02 23:12:08.573396 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt
-2021-06-02 23:12:08.653519 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt took: 0:00:00.080123
-2021-06-02 23:12:08.658530 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer2.txt' of shape (234, 380)
-2021-06-02 23:12:08.763387 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_pp_inst0_pilotpoints.csv.tpl'
-2021-06-02 23:12:08.763387 starting: setting up pilot point parameters
-2021-06-02 23:12:08.763387 No spatial reference (containing cell spacing) passed.
-2021-06-02 23:12:08.763387 OK - using spatial reference in parent object.
-2021-06-02 23:12:14.668274 2602 pilot point parameters created
-2021-06-02 23:12:14.668274 pilot point 'pargp':npf_k_layer2_pp_inst:0
-2021-06-02 23:12:14.668274 finished: setting up pilot point parameters took: 0:00:05.904887
-2021-06-02 23:12:15.683195 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_pp_inst0pp.dat.tpl'
-2021-06-02 23:12:15.688202 saving zone array ..\hagfors_ss_template\npf_k_layer2_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k_layer2_pp_inst0pp.dat.tpl
-2021-06-02 23:12:15.733450 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt'] took: 0:00:07.160054
-2021-06-02 23:12:15.742976 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt']
-2021-06-02 23:12:15.742976 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt
-2021-06-02 23:12:15.823048 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt took: 0:00:00.080072
-2021-06-02 23:12:15.823048 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer3.txt' of shape (234, 380)
-2021-06-02 23:12:15.953377 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl'
-2021-06-02 23:12:15.953377 starting: writing template file ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl for ['npf_k_layer3_gr_inst:0']
-2021-06-02 23:12:15.953377 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
-2021-06-02 23:12:17.063241 finished: writing template file ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl for ['npf_k_layer3_gr_inst:0'] took: 0:00:01.109864
-2021-06-02 23:12:17.063241 finished: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl' took: 0:00:01.109864
-2021-06-02 23:12:17.063241 saving zone array ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl
-2021-06-02 23:12:17.243303 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt'] took: 0:00:01.500327
-2021-06-02 23:12:17.243303 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt']
-2021-06-02 23:12:17.243303 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt
-2021-06-02 23:12:17.333242 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt took: 0:00:00.089939
-2021-06-02 23:12:17.333242 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer3.txt' of shape (234, 380)
-2021-06-02 23:12:17.473344 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_pp_inst0_pilotpoints.csv.tpl'
-2021-06-02 23:12:17.473344 starting: setting up pilot point parameters
-2021-06-02 23:12:17.473344 No spatial reference (containing cell spacing) passed.
-2021-06-02 23:12:17.473344 OK - using spatial reference in parent object.
-2021-06-02 23:12:22.537987 2602 pilot point parameters created
-2021-06-02 23:12:22.537987 pilot point 'pargp':npf_k_layer3_pp_inst:0
-2021-06-02 23:12:22.537987 finished: setting up pilot point parameters took: 0:00:05.064643
-2021-06-02 23:12:23.688402 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_pp_inst0pp.dat.tpl'
-2021-06-02 23:12:23.688402 saving zone array ..\hagfors_ss_template\npf_k_layer3_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k_layer3_pp_inst0pp.dat.tpl
-2021-06-02 23:12:23.723248 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt'] took: 0:00:06.479945
-2021-06-02 23:12:24.173318 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt']
-2021-06-02 23:12:24.173318 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt
-2021-06-02 23:12:24.233400 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt took: 0:00:00.060082
-2021-06-02 23:12:24.233400 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer1.txt' of shape (234, 380)
-2021-06-02 23:12:24.323305 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl'
-2021-06-02 23:12:24.323305 starting: writing template file ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl for ['npf_k33_layer1_gr_inst:0']
-2021-06-02 23:12:24.323305 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
-2021-06-02 23:12:25.178240 finished: writing template file ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl for ['npf_k33_layer1_gr_inst:0'] took: 0:00:00.854935
-2021-06-02 23:12:25.183256 finished: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl' took: 0:00:00.859951
-2021-06-02 23:12:25.183256 saving zone array ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl
-2021-06-02 23:12:25.368130 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt'] took: 0:00:01.194812
-2021-06-02 23:12:25.368130 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt']
-2021-06-02 23:12:25.368130 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt
-2021-06-02 23:12:25.452943 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt took: 0:00:00.084813
-2021-06-02 23:12:25.463135 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer1.txt' of shape (234, 380)
-2021-06-02 23:12:25.568148 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_pp_inst0_pilotpoints.csv.tpl'
-2021-06-02 23:12:25.573163 starting: setting up pilot point parameters
-2021-06-02 23:12:25.573163 No spatial reference (containing cell spacing) passed.
-2021-06-02 23:12:25.573163 OK - using spatial reference in parent object.
-2021-06-02 23:12:30.353456 2602 pilot point parameters created
-2021-06-02 23:12:30.353456 pilot point 'pargp':npf_k33_layer1_pp_inst:0
-2021-06-02 23:12:30.353456 finished: setting up pilot point parameters took: 0:00:04.780293
-2021-06-02 23:12:31.353181 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_pp_inst0pp.dat.tpl'
-2021-06-02 23:12:31.353181 saving zone array ..\hagfors_ss_template\npf_k33_layer1_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k33_layer1_pp_inst0pp.dat.tpl
-2021-06-02 23:12:31.383264 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt'] took: 0:00:06.015134
-2021-06-02 23:12:31.388269 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt']
-2021-06-02 23:12:31.388269 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt
-2021-06-02 23:12:31.452984 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt took: 0:00:00.064715
-2021-06-02 23:12:31.452984 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer2.txt' of shape (234, 380)
-2021-06-02 23:12:31.538112 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl'
-2021-06-02 23:12:31.538112 starting: writing template file ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl for ['npf_k33_layer2_gr_inst:0']
-2021-06-02 23:12:31.538112 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
-2021-06-02 23:12:32.377928 finished: writing template file ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl for ['npf_k33_layer2_gr_inst:0'] took: 0:00:00.839816
-2021-06-02 23:12:32.377928 finished: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl' took: 0:00:00.839816
-2021-06-02 23:12:32.377928 saving zone array ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl
-2021-06-02 23:12:32.547891 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt'] took: 0:00:01.159622
-2021-06-02 23:12:32.547891 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt']
-2021-06-02 23:12:32.547891 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt
-2021-06-02 23:12:32.618078 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt took: 0:00:00.070187
-2021-06-02 23:12:32.623121 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer2.txt' of shape (234, 380)
-2021-06-02 23:12:32.743062 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_pp_inst0_pilotpoints.csv.tpl'
-2021-06-02 23:12:32.743062 starting: setting up pilot point parameters
-2021-06-02 23:12:32.743062 No spatial reference (containing cell spacing) passed.
-2021-06-02 23:12:32.743062 OK - using spatial reference in parent object.
-2021-06-02 23:12:37.873159 2602 pilot point parameters created
-2021-06-02 23:12:37.873159 pilot point 'pargp':npf_k33_layer2_pp_inst:0
-2021-06-02 23:12:37.873159 finished: setting up pilot point parameters took: 0:00:05.130097
-2021-06-02 23:12:39.072955 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_pp_inst0pp.dat.tpl'
-2021-06-02 23:12:39.072955 saving zone array ..\hagfors_ss_template\npf_k33_layer2_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k33_layer2_pp_inst0pp.dat.tpl
-2021-06-02 23:12:39.113088 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt'] took: 0:00:06.565197
-2021-06-02 23:12:39.113088 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt']
-2021-06-02 23:12:39.113088 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt
-2021-06-02 23:12:39.177988 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt took: 0:00:00.064900
-2021-06-02 23:12:39.177988 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer3.txt' of shape (234, 380)
-2021-06-02 23:12:39.263428 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl'
-2021-06-02 23:12:39.263428 starting: writing template file ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl for ['npf_k33_layer3_gr_inst:0']
-2021-06-02 23:12:39.263428 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
-2021-06-02 23:12:40.163319 finished: writing template file ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl for ['npf_k33_layer3_gr_inst:0'] took: 0:00:00.899891
-2021-06-02 23:12:40.163319 finished: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl' took: 0:00:00.899891
-2021-06-02 23:12:40.163319 saving zone array ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl
-2021-06-02 23:12:40.318094 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt'] took: 0:00:01.205006
-2021-06-02 23:12:40.318094 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt']
-2021-06-02 23:12:40.318094 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt
-2021-06-02 23:12:40.393373 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt took: 0:00:00.075279
-2021-06-02 23:12:40.393373 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer3.txt' of shape (234, 380)
-2021-06-02 23:12:40.483184 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_pp_inst0_pilotpoints.csv.tpl'
-2021-06-02 23:12:40.493336 starting: setting up pilot point parameters
-2021-06-02 23:12:40.493336 No spatial reference (containing cell spacing) passed.
-2021-06-02 23:12:40.493336 OK - using spatial reference in parent object.
-2021-06-02 23:12:45.693145 2602 pilot point parameters created
-2021-06-02 23:12:45.693145 pilot point 'pargp':npf_k33_layer3_pp_inst:0
-2021-06-02 23:12:45.703237 finished: setting up pilot point parameters took: 0:00:05.209901
-2021-06-02 23:12:46.773267 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_pp_inst0pp.dat.tpl'
-2021-06-02 23:12:46.773267 saving zone array ..\hagfors_ss_template\npf_k33_layer3_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k33_layer3_pp_inst0pp.dat.tpl
-2021-06-02 23:12:46.803491 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt'] took: 0:00:06.485397
-2021-06-02 23:12:46.968183 starting: adding grid type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt']
-2021-06-02 23:12:46.968183 starting: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt
-2021-06-02 23:12:47.048496 finished: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt took: 0:00:00.080313
-2021-06-02 23:12:47.048496 loaded array '..\temp_ss_pst_from\hagfors.rcha_recharge_1.txt' of shape (234, 380)
-2021-06-02 23:12:47.183265 starting: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl'
-2021-06-02 23:12:47.183265 starting: writing template file ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl for ['rcha_recharge_1_gr_inst:0']
-2021-06-02 23:12:47.194128 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
-2021-06-02 23:12:48.073237 finished: writing template file ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl for ['rcha_recharge_1_gr_inst:0'] took: 0:00:00.889972
-2021-06-02 23:12:48.073237 finished: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl' took: 0:00:00.889972
-2021-06-02 23:12:48.073237 saving zone array ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl
-2021-06-02 23:12:48.215197 finished: adding grid type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt'] took: 0:00:01.247014
-2021-06-02 23:12:48.215197 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt']
-2021-06-02 23:12:48.215197 starting: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt
-2021-06-02 23:12:48.272963 finished: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt took: 0:00:00.057766
-2021-06-02 23:12:48.272963 loaded array '..\temp_ss_pst_from\hagfors.rcha_recharge_1.txt' of shape (234, 380)
-2021-06-02 23:12:48.423403 starting: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_pp_inst0_pilotpoints.csv.tpl'
-2021-06-02 23:12:48.423403 starting: setting up pilot point parameters
-2021-06-02 23:12:48.423403 No spatial reference (containing cell spacing) passed.
-2021-06-02 23:12:48.423403 OK - using spatial reference in parent object.
-2021-06-02 23:12:53.693376 2602 pilot point parameters created
-2021-06-02 23:12:53.693376 pilot point 'pargp':rcha_recharge_1_pp_inst:0
-2021-06-02 23:12:53.693376 finished: setting up pilot point parameters took: 0:00:05.269973
-2021-06-02 23:12:54.673211 starting: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_pp_inst0pp.dat.tpl'
-2021-06-02 23:12:54.673211 saving zone array ..\hagfors_ss_template\rcha_recharge_1_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\rcha_recharge_1_pp_inst0pp.dat.tpl
-2021-06-02 23:12:54.713330 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt'] took: 0:00:06.498133
-2021-06-02 23:13:30.182994 starting: adding grid type multiplier style parameters for file(s) ['hagfors.sfr_packagedata.txt']
-2021-06-02 23:13:30.182994 starting: loading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt
-2021-06-02 23:13:30.182994 starting: reading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt
-2021-06-02 23:13:30.193355 finished: reading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt took: 0:00:00.010361
-2021-06-02 23:13:30.203414 loaded list '..\hagfors_ss_template\hagfors.sfr_packagedata.txt' of shape (698, 15)
-2021-06-02 23:13:30.213370 finished: loading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt took: 0:00:00.030376
-2021-06-02 23:13:30.213370 starting: writing list-based template file '..\hagfors_ss_template\sfr_rhk_inst0_grid.csv.tpl'
-2021-06-02 23:13:30.253277 finished: writing list-based template file '..\hagfors_ss_template\sfr_rhk_inst0_grid.csv.tpl' took: 0:00:00.039907
-2021-06-02 23:13:30.263139 finished: adding grid type multiplier style parameters for file(s) ['hagfors.sfr_packagedata.txt'] took: 0:00:00.080145
-2021-06-02 23:16:04.997848 starting: adding observations from output file head.obs.csv
-2021-06-02 23:16:04.997848 starting: adding observations from tabular output file '['head.obs.csv']'
-2021-06-02 23:16:04.997848 starting: reading list ..\hagfors_ss_template\head.obs.csv
-2021-06-02 23:16:05.006329 finished: reading list ..\hagfors_ss_template\head.obs.csv took: 0:00:00.008481
-2021-06-02 23:16:05.006329 starting: building insfile for tabular output file head.obs.csv
-2021-06-02 23:16:05.012918 finished: building insfile for tabular output file head.obs.csv took: 0:00:00.006589
-2021-06-02 23:16:05.012918 starting: adding observation from instruction file '..\hagfors_ss_template\head.obs.csv.ins'
-2021-06-02 23:16:05.027855 finished: adding observation from instruction file '..\hagfors_ss_template\head.obs.csv.ins' took: 0:00:00.014937
-2021-06-02 23:16:05.027855 finished: adding observations from tabular output file '['head.obs.csv']' took: 0:00:00.030007
-2021-06-02 23:22:26.261863 forward_run line:pyemu.os_utils.run(r'mf6')
-
-2021-06-02 23:42:19.680877 starting: drawing realizations
-2021-06-02 23:42:19.911260 starting: spectral simulation for grid-scale pars
-2021-06-02 23:42:23.863955 starting: SpecSim: drawing 50 realization for group npf_k_layer1_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111)
-2021-06-02 23:42:27.524451 finished: SpecSim: drawing 50 realization for group npf_k_layer1_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111) took: 0:00:03.660496
-2021-06-02 23:42:27.699634 starting: SpecSim: drawing 50 realization for group npf_k_layer2_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111)
-2021-06-02 23:42:30.649259 finished: SpecSim: drawing 50 realization for group npf_k_layer2_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111) took: 0:00:02.949625
-2021-06-02 23:42:30.749556 starting: SpecSim: drawing 50 realization for group npf_k_layer3_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111)
-2021-06-02 23:42:33.248942 finished: SpecSim: drawing 50 realization for group npf_k_layer3_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111) took: 0:00:02.499386
-2021-06-02 23:42:33.374601 starting: SpecSim: drawing 50 realization for group npf_k33_layer1_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111)
-2021-06-02 23:42:35.809139 finished: SpecSim: drawing 50 realization for group npf_k33_layer1_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111) took: 0:00:02.434538
-2021-06-02 23:42:35.909106 starting: SpecSim: drawing 50 realization for group npf_k33_layer2_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111)
-2021-06-02 23:42:38.324069 finished: SpecSim: drawing 50 realization for group npf_k33_layer2_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111) took: 0:00:02.414963
-2021-06-02 23:42:38.419252 starting: SpecSim: drawing 50 realization for group npf_k33_layer3_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111)
-2021-06-02 23:42:41.303912 finished: SpecSim: drawing 50 realization for group npf_k33_layer3_gr__multiplier with 65384 pars, (log) variance 0.1111111111111111 (sill 0.1111111111111111) took: 0:00:02.884660
-2021-06-02 23:42:41.424188 starting: SpecSim: drawing 50 realization for group rcha_recharge_1_gr__multiplier with 65384 pars, (log) variance 0.006323463658479584 (sill 0.006323463658479584)
-2021-06-02 23:42:44.603837 finished: SpecSim: drawing 50 realization for group rcha_recharge_1_gr__multiplier with 65384 pars, (log) variance 0.006323463658479584 (sill 0.006323463658479584) took: 0:00:03.179649
-2021-06-02 23:42:46.299030 finished: spectral simulation for grid-scale pars took: 0:00:26.387770
-2021-06-02 23:42:46.299030 starting: Drawing non-specsim pars
-2021-06-02 23:45:11.491626 finished: Drawing non-specsim pars took: 0:02:25.192596
-2021-06-02 23:45:12.834208 finished: drawing realizations took: 0:02:53.153331
+2021-06-05 19:39:08.658188 starting: opening PstFrom.log for logging
+2021-06-05 19:39:08.658188 starting PstFrom process
+2021-06-05 19:39:08.663175 starting: setting up dirs
+2021-06-05 19:39:08.663175 starting: removing existing new_d '..\hagfors_ss_template'
+2021-06-05 19:39:08.736076 finished: removing existing new_d '..\hagfors_ss_template' took: 0:00:00.072901
+2021-06-05 19:39:08.736076 starting: copying original_d '..\temp_ss_pst_from' to new_d '..\hagfors_ss_template'
+2021-06-05 19:39:08.865632 finished: copying original_d '..\temp_ss_pst_from' to new_d '..\hagfors_ss_template' took: 0:00:00.129556
+2021-06-05 19:39:08.866632 finished: setting up dirs took: 0:00:00.203457
+2021-06-05 19:39:29.172223 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt']
+2021-06-05 19:39:29.173220 WARNING: 0) Inconsistency between geostruct transform and partrans.
+2021-06-05 19:39:29.173220 WARNING: 1) Setting geostruct transform to log
+2021-06-05 19:39:29.173220 WARNING: -) Better to pass an appropriately transformed geostruct
+2021-06-05 19:39:29.173220 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt
+2021-06-05 19:39:29.224083 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt took: 0:00:00.050863
+2021-06-05 19:39:29.224083 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer1.txt' of shape (234, 380)
+2021-06-05 19:39:29.312807 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl'
+2021-06-05 19:39:29.312807 starting: writing template file ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl for ['npf_k_layer1_gr_inst:0']
+2021-06-05 19:39:29.313803 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
+2021-06-05 19:39:30.273078 finished: writing template file ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl for ['npf_k_layer1_gr_inst:0'] took: 0:00:00.960271
+2021-06-05 19:39:30.274075 finished: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl' took: 0:00:00.961268
+2021-06-05 19:39:30.274075 saving zone array ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k_layer1_gr_inst0_grid.csv.tpl
+2021-06-05 19:39:30.452597 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt'] took: 0:00:01.280374
+2021-06-05 19:39:30.452597 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt']
+2021-06-05 19:39:30.452597 WARNING: 0) Inconsistency between geostruct transform and partrans.
+2021-06-05 19:39:30.453594 WARNING: 1) Setting geostruct transform to log
+2021-06-05 19:39:30.453594 WARNING: -) Better to pass an appropriately transformed geostruct
+2021-06-05 19:39:30.453594 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt
+2021-06-05 19:39:30.528394 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer1.txt took: 0:00:00.074800
+2021-06-05 19:39:30.529391 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer1.txt' of shape (234, 380)
+2021-06-05 19:39:30.627129 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_pp_inst0_pilotpoints.csv.tpl'
+2021-06-05 19:39:30.627129 starting: setting up pilot point parameters
+2021-06-05 19:39:30.627129 No spatial reference (containing cell spacing) passed.
+2021-06-05 19:39:30.628127 OK - using spatial reference in parent object.
+2021-06-05 19:39:32.102333 635 pilot point parameters created
+2021-06-05 19:39:32.103331 pilot point 'pargp':npf_k_layer1_pp_inst:0
+2021-06-05 19:39:32.103331 finished: setting up pilot point parameters took: 0:00:01.476202
+2021-06-05 19:39:32.249025 starting: calculating factors for pargp=npf_k_layer1_pp_inst:0
+2021-06-05 19:39:32.249025 saving krige variance file:..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.var.dat
+2021-06-05 19:39:32.249025 saving krige factors file:..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.fac
+2021-06-05 19:43:18.697839 finished: calculating factors for pargp=npf_k_layer1_pp_inst:0 took: 0:03:46.448814
+2021-06-05 19:43:18.697839 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.dat.tpl'
+2021-06-05 19:43:18.697839 saving zone array ..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k_layer1_pp_inst0pp.dat.tpl
+2021-06-05 19:43:18.725796 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer1.txt'] took: 0:03:48.273199
+2021-06-05 19:43:18.795577 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt']
+2021-06-05 19:43:18.795577 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt
+2021-06-05 19:43:18.848435 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt took: 0:00:00.052858
+2021-06-05 19:43:18.848435 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer2.txt' of shape (234, 380)
+2021-06-05 19:43:18.931786 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl'
+2021-06-05 19:43:18.931786 starting: writing template file ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl for ['npf_k_layer2_gr_inst:0']
+2021-06-05 19:43:18.932782 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
+2021-06-05 19:43:19.950251 finished: writing template file ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl for ['npf_k_layer2_gr_inst:0'] took: 0:00:01.018465
+2021-06-05 19:43:19.950251 finished: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl' took: 0:00:01.018465
+2021-06-05 19:43:19.951249 saving zone array ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k_layer2_gr_inst0_grid.csv.tpl
+2021-06-05 19:43:20.147724 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt'] took: 0:00:01.352147
+2021-06-05 19:43:20.148722 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt']
+2021-06-05 19:43:20.149718 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt
+2021-06-05 19:43:20.239478 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer2.txt took: 0:00:00.089760
+2021-06-05 19:43:20.239478 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer2.txt' of shape (234, 380)
+2021-06-05 19:43:20.370845 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_pp_inst0_pilotpoints.csv.tpl'
+2021-06-05 19:43:20.370845 starting: setting up pilot point parameters
+2021-06-05 19:43:20.371842 No spatial reference (containing cell spacing) passed.
+2021-06-05 19:43:20.371842 OK - using spatial reference in parent object.
+2021-06-05 19:43:21.888864 635 pilot point parameters created
+2021-06-05 19:43:21.888864 pilot point 'pargp':npf_k_layer2_pp_inst:0
+2021-06-05 19:43:21.889862 finished: setting up pilot point parameters took: 0:00:01.519017
+2021-06-05 19:43:22.064588 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer2_pp_inst0pp.dat.tpl'
+2021-06-05 19:43:22.065586 saving zone array ..\hagfors_ss_template\npf_k_layer2_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k_layer2_pp_inst0pp.dat.tpl
+2021-06-05 19:43:22.095505 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer2.txt'] took: 0:00:01.946783
+2021-06-05 19:43:22.095505 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt']
+2021-06-05 19:43:22.095505 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt
+2021-06-05 19:43:22.151021 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt took: 0:00:00.055516
+2021-06-05 19:43:22.151021 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer3.txt' of shape (234, 380)
+2021-06-05 19:43:22.235792 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl'
+2021-06-05 19:43:22.235792 starting: writing template file ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl for ['npf_k_layer3_gr_inst:0']
+2021-06-05 19:43:22.236791 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
+2021-06-05 19:43:23.499938 finished: writing template file ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl for ['npf_k_layer3_gr_inst:0'] took: 0:00:01.264146
+2021-06-05 19:43:23.500936 finished: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl' took: 0:00:01.265144
+2021-06-05 19:43:23.501934 saving zone array ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k_layer3_gr_inst0_grid.csv.tpl
+2021-06-05 19:43:23.700909 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt'] took: 0:00:01.605404
+2021-06-05 19:43:23.701907 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt']
+2021-06-05 19:43:23.702905 starting: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt
+2021-06-05 19:43:23.800644 finished: loading array ..\hagfors_ss_template\hagfors.npf_k_layer3.txt took: 0:00:00.097739
+2021-06-05 19:43:23.800644 loaded array '..\temp_ss_pst_from\hagfors.npf_k_layer3.txt' of shape (234, 380)
+2021-06-05 19:43:23.949245 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_pp_inst0_pilotpoints.csv.tpl'
+2021-06-05 19:43:23.950267 starting: setting up pilot point parameters
+2021-06-05 19:43:23.951240 No spatial reference (containing cell spacing) passed.
+2021-06-05 19:43:23.951240 OK - using spatial reference in parent object.
+2021-06-05 19:43:25.868393 635 pilot point parameters created
+2021-06-05 19:43:25.869389 pilot point 'pargp':npf_k_layer3_pp_inst:0
+2021-06-05 19:43:25.869389 finished: setting up pilot point parameters took: 0:00:01.919122
+2021-06-05 19:43:26.063868 starting: writing array-based template file '..\hagfors_ss_template\npf_k_layer3_pp_inst0pp.dat.tpl'
+2021-06-05 19:43:26.063868 saving zone array ..\hagfors_ss_template\npf_k_layer3_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k_layer3_pp_inst0pp.dat.tpl
+2021-06-05 19:43:26.100770 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k_layer3.txt'] took: 0:00:02.398863
+2021-06-05 19:43:26.604424 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt']
+2021-06-05 19:43:26.605420 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt
+2021-06-05 19:43:26.705152 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt took: 0:00:00.099732
+2021-06-05 19:43:26.706149 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer1.txt' of shape (234, 380)
+2021-06-05 19:43:26.863238 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl'
+2021-06-05 19:43:26.864262 starting: writing template file ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl for ['npf_k33_layer1_gr_inst:0']
+2021-06-05 19:43:26.865234 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
+2021-06-05 19:43:28.506392 finished: writing template file ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl for ['npf_k33_layer1_gr_inst:0'] took: 0:00:01.642130
+2021-06-05 19:43:28.507390 finished: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl' took: 0:00:01.644152
+2021-06-05 19:43:28.508388 saving zone array ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k33_layer1_gr_inst0_grid.csv.tpl
+2021-06-05 19:43:28.711448 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt'] took: 0:00:02.107024
+2021-06-05 19:43:28.712444 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt']
+2021-06-05 19:43:28.712444 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt
+2021-06-05 19:43:28.812177 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer1.txt took: 0:00:00.099733
+2021-06-05 19:43:28.812177 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer1.txt' of shape (234, 380)
+2021-06-05 19:43:28.960866 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_pp_inst0_pilotpoints.csv.tpl'
+2021-06-05 19:43:28.960866 starting: setting up pilot point parameters
+2021-06-05 19:43:28.961864 No spatial reference (containing cell spacing) passed.
+2021-06-05 19:43:28.961864 OK - using spatial reference in parent object.
+2021-06-05 19:43:30.403457 635 pilot point parameters created
+2021-06-05 19:43:30.404455 pilot point 'pargp':npf_k33_layer1_pp_inst:0
+2021-06-05 19:43:30.405453 finished: setting up pilot point parameters took: 0:00:01.444587
+2021-06-05 19:43:30.616007 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer1_pp_inst0pp.dat.tpl'
+2021-06-05 19:43:30.617005 saving zone array ..\hagfors_ss_template\npf_k33_layer1_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k33_layer1_pp_inst0pp.dat.tpl
+2021-06-05 19:43:30.656899 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer1.txt'] took: 0:00:01.944455
+2021-06-05 19:43:30.657896 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt']
+2021-06-05 19:43:30.657896 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt
+2021-06-05 19:43:30.719027 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt took: 0:00:00.061131
+2021-06-05 19:43:30.719027 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer2.txt' of shape (234, 380)
+2021-06-05 19:43:30.832230 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl'
+2021-06-05 19:43:30.833228 starting: writing template file ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl for ['npf_k33_layer2_gr_inst:0']
+2021-06-05 19:43:30.834224 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
+2021-06-05 19:43:32.258117 finished: writing template file ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl for ['npf_k33_layer2_gr_inst:0'] took: 0:00:01.424889
+2021-06-05 19:43:32.259114 finished: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl' took: 0:00:01.426884
+2021-06-05 19:43:32.259114 saving zone array ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k33_layer2_gr_inst0_grid.csv.tpl
+2021-06-05 19:43:32.447614 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt'] took: 0:00:01.789718
+2021-06-05 19:43:32.448614 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt']
+2021-06-05 19:43:32.449610 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt
+2021-06-05 19:43:32.521018 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer2.txt took: 0:00:00.071408
+2021-06-05 19:43:32.522016 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer2.txt' of shape (234, 380)
+2021-06-05 19:43:32.653173 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_pp_inst0_pilotpoints.csv.tpl'
+2021-06-05 19:43:32.654170 starting: setting up pilot point parameters
+2021-06-05 19:43:32.655168 No spatial reference (containing cell spacing) passed.
+2021-06-05 19:43:32.655168 OK - using spatial reference in parent object.
+2021-06-05 19:43:34.614998 635 pilot point parameters created
+2021-06-05 19:43:34.615997 pilot point 'pargp':npf_k33_layer2_pp_inst:0
+2021-06-05 19:43:34.615997 finished: setting up pilot point parameters took: 0:00:01.961827
+2021-06-05 19:43:34.785544 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer2_pp_inst0pp.dat.tpl'
+2021-06-05 19:43:34.785544 saving zone array ..\hagfors_ss_template\npf_k33_layer2_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k33_layer2_pp_inst0pp.dat.tpl
+2021-06-05 19:43:34.824440 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer2.txt'] took: 0:00:02.375826
+2021-06-05 19:43:34.825436 starting: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt']
+2021-06-05 19:43:34.825436 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt
+2021-06-05 19:43:34.889266 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt took: 0:00:00.063830
+2021-06-05 19:43:34.890263 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer3.txt' of shape (234, 380)
+2021-06-05 19:43:35.012950 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl'
+2021-06-05 19:43:35.012950 starting: writing template file ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl for ['npf_k33_layer3_gr_inst:0']
+2021-06-05 19:43:35.014947 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
+2021-06-05 19:43:36.796995 finished: writing template file ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl for ['npf_k33_layer3_gr_inst:0'] took: 0:00:01.784045
+2021-06-05 19:43:36.796995 finished: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl' took: 0:00:01.784045
+2021-06-05 19:43:36.797994 saving zone array ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\npf_k33_layer3_gr_inst0_grid.csv.tpl
+2021-06-05 19:43:37.023044 finished: adding grid type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt'] took: 0:00:02.197608
+2021-06-05 19:43:37.024041 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt']
+2021-06-05 19:43:37.024041 starting: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt
+2021-06-05 19:43:37.100835 finished: loading array ..\hagfors_ss_template\hagfors.npf_k33_layer3.txt took: 0:00:00.076794
+2021-06-05 19:43:37.101832 loaded array '..\temp_ss_pst_from\hagfors.npf_k33_layer3.txt' of shape (234, 380)
+2021-06-05 19:43:37.198576 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_pp_inst0_pilotpoints.csv.tpl'
+2021-06-05 19:43:37.199571 starting: setting up pilot point parameters
+2021-06-05 19:43:37.199571 No spatial reference (containing cell spacing) passed.
+2021-06-05 19:43:37.199571 OK - using spatial reference in parent object.
+2021-06-05 19:43:38.663819 635 pilot point parameters created
+2021-06-05 19:43:38.664816 pilot point 'pargp':npf_k33_layer3_pp_inst:0
+2021-06-05 19:43:38.664816 finished: setting up pilot point parameters took: 0:00:01.465245
+2021-06-05 19:43:38.855306 starting: writing array-based template file '..\hagfors_ss_template\npf_k33_layer3_pp_inst0pp.dat.tpl'
+2021-06-05 19:43:38.856303 saving zone array ..\hagfors_ss_template\npf_k33_layer3_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\npf_k33_layer3_pp_inst0pp.dat.tpl
+2021-06-05 19:43:38.894203 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.npf_k33_layer3.txt'] took: 0:00:01.870162
+2021-06-05 19:43:39.040816 starting: adding grid type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt']
+2021-06-05 19:43:39.041813 starting: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt
+2021-06-05 19:43:39.110630 finished: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt took: 0:00:00.068817
+2021-06-05 19:43:39.111625 loaded array '..\temp_ss_pst_from\hagfors.rcha_recharge_1.txt' of shape (234, 380)
+2021-06-05 19:43:39.233315 starting: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl'
+2021-06-05 19:43:39.233315 starting: writing template file ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl for ['rcha_recharge_1_gr_inst:0']
+2021-06-05 19:43:39.235311 WARNING: get_xy() warning: position of i and j in index_cols not specified, assume (i,j) are final two entries in index_cols.
+2021-06-05 19:43:40.896902 finished: writing template file ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl for ['rcha_recharge_1_gr_inst:0'] took: 0:00:01.663587
+2021-06-05 19:43:40.897900 finished: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl' took: 0:00:01.664585
+2021-06-05 19:43:40.897900 saving zone array ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.zone for tpl file ..\hagfors_ss_template\rcha_recharge_1_gr_inst0_grid.csv.tpl
+2021-06-05 19:43:41.092380 finished: adding grid type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt'] took: 0:00:02.051564
+2021-06-05 19:43:41.092380 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt']
+2021-06-05 19:43:41.093377 starting: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt
+2021-06-05 19:43:41.164188 finished: loading array ..\hagfors_ss_template\hagfors.rcha_recharge_1.txt took: 0:00:00.070811
+2021-06-05 19:43:41.164188 loaded array '..\temp_ss_pst_from\hagfors.rcha_recharge_1.txt' of shape (234, 380)
+2021-06-05 19:43:41.260928 starting: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_pp_inst0_pilotpoints.csv.tpl'
+2021-06-05 19:43:41.261926 starting: setting up pilot point parameters
+2021-06-05 19:43:41.261926 No spatial reference (containing cell spacing) passed.
+2021-06-05 19:43:41.261926 OK - using spatial reference in parent object.
+2021-06-05 19:43:42.587102 635 pilot point parameters created
+2021-06-05 19:43:42.588101 pilot point 'pargp':rcha_recharge_1_pp_inst:0
+2021-06-05 19:43:42.588101 finished: setting up pilot point parameters took: 0:00:01.326175
+2021-06-05 19:43:42.754654 starting: writing array-based template file '..\hagfors_ss_template\rcha_recharge_1_pp_inst0pp.dat.tpl'
+2021-06-05 19:43:42.755653 saving zone array ..\hagfors_ss_template\rcha_recharge_1_pp_inst0pp.dat.zone for tpl file ..\hagfors_ss_template\rcha_recharge_1_pp_inst0pp.dat.tpl
+2021-06-05 19:43:42.782581 finished: adding pilotpoints type multiplier style parameters for file(s) ['hagfors.rcha_recharge_1.txt'] took: 0:00:01.690201
+2021-06-05 19:43:42.791557 starting: adding grid type multiplier style parameters for file(s) ['hagfors.sfr_packagedata.txt']
+2021-06-05 19:43:42.791557 starting: loading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt
+2021-06-05 19:43:42.792554 starting: reading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt
+2021-06-05 19:43:42.803525 finished: reading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt took: 0:00:00.010971
+2021-06-05 19:43:42.803525 loaded list '..\hagfors_ss_template\hagfors.sfr_packagedata.txt' of shape (698, 15)
+2021-06-05 19:43:42.812499 finished: loading list ..\hagfors_ss_template\hagfors.sfr_packagedata.txt took: 0:00:00.020942
+2021-06-05 19:43:42.812499 starting: writing list-based template file '..\hagfors_ss_template\sfr_rhk_inst0_grid.csv.tpl'
+2021-06-05 19:43:42.852394 finished: writing list-based template file '..\hagfors_ss_template\sfr_rhk_inst0_grid.csv.tpl' took: 0:00:00.039895
+2021-06-05 19:43:42.862365 finished: adding grid type multiplier style parameters for file(s) ['hagfors.sfr_packagedata.txt'] took: 0:00:00.070808
+2021-06-05 19:45:28.362713 starting: adding observations from output file head.obs.csv
+2021-06-05 19:45:28.362713 starting: adding observations from tabular output file '['head.obs.csv']'
+2021-06-05 19:45:28.362713 starting: reading list ..\hagfors_ss_template\head.obs.csv
+2021-06-05 19:45:28.375719 finished: reading list ..\hagfors_ss_template\head.obs.csv took: 0:00:00.013006
+2021-06-05 19:45:28.376717 starting: building insfile for tabular output file head.obs.csv
+2021-06-05 19:45:28.387691 finished: building insfile for tabular output file head.obs.csv took: 0:00:00.010974
+2021-06-05 19:45:28.388688 starting: adding observation from instruction file '..\hagfors_ss_template\head.obs.csv.ins'
+2021-06-05 19:45:28.395666 finished: adding observation from instruction file '..\hagfors_ss_template\head.obs.csv.ins' took: 0:00:00.006978
+2021-06-05 19:45:28.397661 finished: adding observations from tabular output file '['head.obs.csv']' took: 0:00:00.034948
