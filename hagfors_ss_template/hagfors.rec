@@ -1,0 +1,444 @@
+             pestpp-ies.exe - a GLM iterative Ensemble Smoother
+for PEST(++) datasets 
+
+                 by the PEST++ developement team
+
+
+
+
+
+version: 5.0.0
+binary compiled on Sep  1 2020 at 10:13:53
+
+using control file: "hagfors.pst"
+in directory: "C:\Users\nat12nho\Documents\Development\repos\hagfors_gwm\hagfors_ss_template"
+
+...reading external file 'hagfors.pargp_data.csv'
+...header line: PARGPNME,INCTYP,DERINC,DERINCLB,FORCEN,DERINCMUL,DERMTHD,SPLITTHRESH,SPLITRELDIFF,SPLITACTION
+...read 16 lines from external file
+...reading external file 'hagfors.par_data.csv'
+...header line: PARNME,PARTRANS,PARCHGLIM,PARVAL1,PARLBND,PARUBND,PARGP,SCALE,OFFSET,DERCOM,INST,I,J,X,Y,ZONE,USECOL,IDX0,IDX1,IDX2,IDX3,PARVAL1_TRANS,PARLBND_TRANS,PARUBND_TRANS
+...read 462832 lines from external file
+...reading external file 'hagfors.obs_data.csv'
+...header line: OBSNME,OBSVAL,WEIGHT,OBGNME,USECOL,TIME
+...read 145 lines from external file
+...reading external file 'hagfors.tplfile_data.csv'
+...header line: PEST_FILE,MODEL_FILE
+...read 16 lines from external file
+...reading external file 'hagfors.insfile_data.csv'
+...header line: PEST_FILE,MODEL_FILE
+...read 2 lines from external file
+
+Note 'NOPTMAX' == 0, switching to forgiveness mode when checking inputs
+
+noptmax = 0, resetting max_run_fail = 1
+
+    This software has been approved for release by the
+    U.S.Geological Survey(USGS).Although the software has 
+    been subjected to rigorous review, the USGS reserves the
+    right to update the software as needed pursuant to further
+    analysisand review.No warranty, expressed or implied, is 
+    made by the USGS or the U.S.Government as to the
+    functionality of the softwareand related material nor shall
+    the fact of release constitute any such warranty.
+    Furthermore, the software is released on condition that
+    neither the USGS nor the U.S.Government shall be held
+    liable for any damages resulting from its authorized 
+    or unauthorized use.
+
+
+Case dimensions:- 
+    Number of parameters = 462831
+    Number of adjustable parameters = 462831
+    Number of observations = 144
+    Number of prior estimates = 0
+
+PEST Control Information
+    relparmax = 1
+    facparmax = 1.1
+    facorig = 0.001
+    phiredswh = 0.1
+    noptmax = 0
+    phiredstp = 0.01
+    nphistp = 3
+    nphinored = 3
+    relparstp = 0.01
+    nrelpar = 3
+
+
+    PEST++ OPTIONS: 
+
+...general options (used in multiple tools): 
+svd_pack: redsvd
+lambda_scale_fac: 0.75,1,1.1,
+max_run_fail: 1
+yamr_poll_interval: 1
+parameter_covariance: 
+observation_covariance: 
+hotstart_resfile: 
+overdue_resched_fac: 1.15
+overdue_giveup_fac: 100
+overdue_giveup_minutes: 1e+30
+condor_submit_file: 
+tie_by_group: 0
+par_sigma_range: 4
+enforce_tied_bounds: 0
+debug_parse_only: 0
+check_tplins: 1
+fill_tpl_zeros: 0
+additional_ins_delimiters: ,
+random_seed: 358183147
+
+...pestpp-glm specific options:
+max_n_super: 1000000
+super_eigthresh: 1e-06
+n_iter_base: 1000000
+n_iter_super: 0
+super_relparmax: 0.1
+max_super_frz_iter: 20
+max_reg_iter: 20
+lambdas: 0.1,1,10,100,1000,
+iteration_summary: 0
+der_forgive: 1
+uncertainty: 1
+forecasts: 
+base_jacobian: 
+glm_num_reals: 0
+jac_scale: 1
+glm_normal_form: DIAG
+glm_debug_der_fail: 0
+glm_debug_lamb_fail: 0
+glm_debug_real_fail: 0
+glm_accept_mc_phi: 0
+glm_rebase_super: 0glm_iter_mc: 0
+...pestpp-swp options:
+sweep_parameter_csv_file: 
+sweep_output_csv_file: sweep_out.csv
+sweep_chunk: 500
+sweep_forgive: 0
+sweep_base_run: 0
+
+...pestpp-opt options:
+opt_objective_function: 
+opt_coin_log: 1
+opt_skip_final: 0
+opt_std_weights: 0
+opt_stack_size: 0
+opt_par_stack: 
+opt_obs_stack: 
+opt_decision_variable_groups: 
+opt_external_variable_groups: 
+opt_constraint_groups: 
+opt_risk: 0.5
+opt_iter_derinc_fac: 1
+opt_direction: 1
+opt_iter_tol: 0.001
+opt_recalc_fosm_every: 1
+opt_include_bnd_pi: 1
+
+...pestpp-ies options:
+ies_parameter_ensemble: 
+ies_observation_ensemble: 
+ies_restart_parameter_ensemble: 
+ies_restart_observation_ensemble: 
+ies_use_approximate_solution: 1
+ies_lambda_mults: 0.1,1,10,
+ies_initial_lambda: -999
+ies_use_approx: 1
+ies_subset_size: 4
+ies_reg_factor: 0
+ies_verbose_level: 0
+ies_use_prior_scaling: 0
+ies_num_reals: 50
+ies_bad_phi: 1e+300
+ies_bad_phi_sigma: 1e+300
+ies_include_base: 1
+ies_use_empirical_prior: 0
+ies_group_draws: 1
+ies_enforce_bounds: 1
+ies_save_binary: 0
+ies_localizer: 
+ies_accept_phi_fac: 1.05
+ies_lambda_inc_fac: 10
+ies_lambda_dec_fac: 0.75
+ies_save_lambda_ensembles: 0
+ies_subset_how: RANDOM
+ies_localize_how: PARAMETERS
+ies_num_threads: -1
+ies_debug_fail_subset: 0
+ies_debug_fail_remainder: 0
+ies_debug_bad_phi: 0
+ies_debug_upgrade_only: 0
+ies_debug_high_subset_phi: 0
+ies_debug_high_upgrade_phi: 0
+ies_csv_by_reals: 1
+ies_autoadaloc: 0
+ies_autoadaloc_sigma_dist: 1
+ies_enforce_chglim: 0
+ies_center_on: 
+ies_no_noise: 0
+ies_drop_conflicts: 0
+ies_save_rescov:0
+ies_pdc_sigma_distance: -1
+
+pestpp-sen options: 
+gsa_method: MORRIS
+gsa_morris_pooled_obs: 0
+gsa_morris_obs_sen: 1
+gsa_morris_p: 4
+gsa_morris_r: 4
+gsa_morris_delta: 0.6666
+gsa_sobol_samples: 4
+gsa_sobol_par_dist: norm
+
+panther_agent_restart_on_error: 0
+panther_agent_no_ping_timeout_secs: -1
+panther_debug_loop: 0
+panther_agent_freeze_on_fail: 0
+
+
+
+Model command line(s):- 
+    python forward_run.py
+
+Model interface files:-
+    template files:
+      npf_k_layer1_gr_inst0_grid.csv.tpl
+      npf_k_layer1_pp_inst0pp.dat.tpl
+      npf_k_layer2_gr_inst0_grid.csv.tpl
+      npf_k_layer2_pp_inst0pp.dat.tpl
+      npf_k_layer3_gr_inst0_grid.csv.tpl
+      npf_k_layer3_pp_inst0pp.dat.tpl
+      npf_k33_layer1_gr_inst0_grid.csv.tpl
+      npf_k33_layer1_pp_inst0pp.dat.tpl
+      npf_k33_layer2_gr_inst0_grid.csv.tpl
+      npf_k33_layer2_pp_inst0pp.dat.tpl
+      npf_k33_layer3_gr_inst0_grid.csv.tpl
+      npf_k33_layer3_pp_inst0pp.dat.tpl
+      rcha_recharge_1_gr_inst0_grid.csv.tpl
+      rcha_recharge_1_pp_inst0pp.dat.tpl
+      sfr_rhk_inst0_grid.csv.tpl
+    model input files:
+      mult\npf_k_layer1_gr_inst0_grid.csv
+      npf_k_layer1_pp_inst0pp.dat
+      mult\npf_k_layer2_gr_inst0_grid.csv
+      npf_k_layer2_pp_inst0pp.dat
+      mult\npf_k_layer3_gr_inst0_grid.csv
+      npf_k_layer3_pp_inst0pp.dat
+      mult\npf_k33_layer1_gr_inst0_grid.csv
+      npf_k33_layer1_pp_inst0pp.dat
+      mult\npf_k33_layer2_gr_inst0_grid.csv
+      npf_k33_layer2_pp_inst0pp.dat
+      mult\npf_k33_layer3_gr_inst0_grid.csv
+      npf_k33_layer3_pp_inst0pp.dat
+      mult\rcha_recharge_1_gr_inst0_grid.csv
+      rcha_recharge_1_pp_inst0pp.dat
+      mult\sfr_rhk_inst0_grid.csv
+
+    instruction files:
+      head.obs.csv.ins
+    model output files:
+      head.obs.csv
+
+
+Parameter group information
+NAME            INCREMENT TYPE     DERIVATIVE INCREMENT    INCREMENT LOWER BOUND  FORCE CENTRAL     INCREMENT MULTIPLIER
+rcha_recharge_1_gr__multiplier       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k33_layer3_gr__multiplier       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k_layer1_gr__multiplier       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k33_layer2_gr__multiplier       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k_layer3_gr__multiplier       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k33_layer1_gr__multiplier       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k_layer2_gr__multiplier       RELATIVE                     0.01                        0         SWITCH                        2
+sfr_rhk               RELATIVE                     0.01                        0         SWITCH                        2
+npf_k33_layer2_pp_inst:0       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k_layer3_pp_inst:0       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k33_layer1_pp_inst:0       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k33_layer3_pp_inst:0       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k_layer2_pp_inst:0       RELATIVE                     0.01                        0         SWITCH                        2
+rcha_recharge_1_pp_inst:0       RELATIVE                     0.01                        0         SWITCH                        2
+npf_k_layer1_pp_inst:0       RELATIVE                     0.01                        0         SWITCH                        2
+
+
+
+...more than 100,000 pars, not writing par data
+
+Observation information
+NAME                                         VALUE               GROUP              WEIGHT
+hds_usecol:b10-2_time:1.0                  133.349    hds_usecol:b10-2                   0
+hds_usecol:b10-4_time:1.0                  133.352    hds_usecol:b10-4                   0
+hds_usecol:b10-5_time:1.0                  133.353    hds_usecol:b10-5                   0
+hds_usecol:b12-1_time:1.0                  138.025    hds_usecol:b12-1                   0
+hds_usecol:b13-1_time:1.0                  138.232    hds_usecol:b13-1                   0
+hds_usecol:b14-1_time:1.0                  138.263    hds_usecol:b14-1                   0
+hds_usecol:b15-1_time:1.0                  138.767    hds_usecol:b15-1                   0
+hds_usecol:b16-1_time:1.0                  136.285    hds_usecol:b16-1                   0
+hds_usecol:b16-2_time:1.0                   136.27    hds_usecol:b16-2                   0
+hds_usecol:b19-4_time:1.0                  136.711    hds_usecol:b19-4                   0
+hds_usecol:b2-1_time:1.0                   136.144     hds_usecol:b2-1                   0
+hds_usecol:b2-2_time:1.0                   136.148     hds_usecol:b2-2                   0
+hds_usecol:b2-3_time:1.0                   136.151     hds_usecol:b2-3                   0
+hds_usecol:b20-1_time:1.0                  138.116    hds_usecol:b20-1                   0
+hds_usecol:b21-1_time:1.0                   138.09    hds_usecol:b21-1                   0
+hds_usecol:b21-3_time:1.0                  138.082    hds_usecol:b21-3                   0
+hds_usecol:b22-1_time:1.0                  137.894    hds_usecol:b22-1                   0
+hds_usecol:b22-2_time:1.0                  137.875    hds_usecol:b22-2                   0
+hds_usecol:b22-4_time:1.0                  137.866    hds_usecol:b22-4                   0
+hds_usecol:b26_time:1.0                    138.335      hds_usecol:b26                   0
+hds_usecol:b27_time:1.0                    138.191      hds_usecol:b27                   0
+hds_usecol:b29_time:1.0                    136.208      hds_usecol:b29                   0
+hds_usecol:b30_time:1.0                    136.208      hds_usecol:b30                   0
+hds_usecol:b34_time:1.0                    136.289      hds_usecol:b34                   0
+hds_usecol:b35_time:1.0                    136.448      hds_usecol:b35                   0
+hds_usecol:b36_time:1.0                    136.368      hds_usecol:b36                   0
+hds_usecol:b37_time:1.0                    136.517      hds_usecol:b37                   0
+hds_usecol:b4_time:1.0                     139.399       hds_usecol:b4                   0
+hds_usecol:b8-1_time:1.0                   133.685     hds_usecol:b8-1                   0
+hds_usecol:b8-2_time:1.0                   133.685     hds_usecol:b8-2                   0
+hds_usecol:b9-2_time:1.0                    133.75     hds_usecol:b9-2                   1
+hds_usecol:b9-4_time:1.0                   133.113     hds_usecol:b9-4                   0
+hds_usecol:b9-5_time:1.0                   133.111     hds_usecol:b9-5                   0
+hds_usecol:kb1-1_time:1.0                  135.685    hds_usecol:kb1-1                   0
+hds_usecol:kb4-3_time:1.0                  134.191    hds_usecol:kb4-3                   0
+hds_usecol:kb4-4_time:1.0                  134.162    hds_usecol:kb4-4                   0
+hds_usecol:ni1301-1_time:1.0               138.157 hds_usecol:ni1301-1                   0
+hds_usecol:ni1301-2_time:1.0               138.162 hds_usecol:ni1301-2                   0
+hds_usecol:ni1301-3_time:1.0               138.156 hds_usecol:ni1301-3                   0
+hds_usecol:ni1302-1_time:1.0               138.026 hds_usecol:ni1302-1                   0
+hds_usecol:ni1302-2_time:1.0               138.019 hds_usecol:ni1302-2                   0
+hds_usecol:ni1302-3_time:1.0               138.008 hds_usecol:ni1302-3                   0
+hds_usecol:ni1401-1_time:1.0               137.909 hds_usecol:ni1401-1                   0
+hds_usecol:ni1401-2_time:1.0               137.898 hds_usecol:ni1401-2                   0
+hds_usecol:ni1402b-1_time:1.0              138.054hds_usecol:ni1402b-1                   0
+hds_usecol:ni1402b-2_time:1.0              138.045hds_usecol:ni1402b-2                   0
+hds_usecol:ni1403-1_time:1.0               136.671 hds_usecol:ni1403-1                   0
+hds_usecol:ni1403-2_time:1.0               136.688 hds_usecol:ni1403-2                   0
+hds_usecol:ni1404-1_time:1.0               138.197 hds_usecol:ni1404-1                   0
+hds_usecol:ni1404-2_time:1.0               138.194 hds_usecol:ni1404-2                   0
+hds_usecol:ni1405-1_time:1.0                138.44 hds_usecol:ni1405-1                   1
+hds_usecol:ni1405-2_time:1.0                138.44 hds_usecol:ni1405-2                   1
+hds_usecol:ni1406-1_time:1.0               137.936 hds_usecol:ni1406-1                   0
+hds_usecol:ni1407-1_time:1.0               137.563 hds_usecol:ni1407-1                   0
+hds_usecol:ni1407-2_time:1.0               137.541 hds_usecol:ni1407-2                   0
+hds_usecol:ni1407-3_time:1.0               137.541 hds_usecol:ni1407-3                   0
+hds_usecol:ni1408-1_time:1.0               137.566 hds_usecol:ni1408-1                   0
+hds_usecol:ni1408-2_time:1.0               137.543 hds_usecol:ni1408-2                   0
+hds_usecol:ni1408-3_time:1.0               137.543 hds_usecol:ni1408-3                   0
+hds_usecol:ni1409-1_time:1.0               137.554 hds_usecol:ni1409-1                   0
+hds_usecol:ni1409-2_time:1.0                137.53 hds_usecol:ni1409-2                   0
+hds_usecol:ni1409-3_time:1.0               137.526 hds_usecol:ni1409-3                   0
+hds_usecol:ni1410-1_time:1.0               137.883 hds_usecol:ni1410-1                   0
+hds_usecol:ni1410-2_time:1.0               137.863 hds_usecol:ni1410-2                   0
+hds_usecol:ni1410-3_time:1.0               137.851 hds_usecol:ni1410-3                   0
+hds_usecol:ni1411-1_time:1.0               138.087 hds_usecol:ni1411-1                   0
+hds_usecol:ni1411-2_time:1.0               138.085 hds_usecol:ni1411-2                   0
+hds_usecol:ni1411-3_time:1.0               138.074 hds_usecol:ni1411-3                   0
+hds_usecol:ni1412-1_time:1.0               136.583 hds_usecol:ni1412-1                   0
+hds_usecol:ni1412-3_time:1.0               136.604 hds_usecol:ni1412-3                   0
+hds_usecol:ni1413-1_time:1.0               136.369 hds_usecol:ni1413-1                   0
+hds_usecol:ni1413-2_time:1.0               136.398 hds_usecol:ni1413-2                   0
+hds_usecol:ni1413-3_time:1.0               136.405 hds_usecol:ni1413-3                   0
+hds_usecol:ni15-o1_time:1.0                135.262  hds_usecol:ni15-o1                   0
+hds_usecol:ni15-o44_time:1.0               135.336 hds_usecol:ni15-o44                   0
+hds_usecol:ni15-o46_time:1.0               134.542 hds_usecol:ni15-o46                   0
+hds_usecol:ni15-o47_time:1.0               134.248 hds_usecol:ni15-o47                   0
+hds_usecol:ni15-o48_time:1.0               133.318 hds_usecol:ni15-o48                   0
+hds_usecol:ni1501-1_time:1.0               136.358 hds_usecol:ni1501-1                   0
+hds_usecol:ni1501-2_time:1.0                137.15 hds_usecol:ni1501-2                   1
+hds_usecol:ni1501-3_time:1.0                136.99 hds_usecol:ni1501-3                   1
+hds_usecol:ni1502-2_time:1.0               138.365 hds_usecol:ni1502-2                   0
+hds_usecol:ni1502-3_time:1.0               138.365 hds_usecol:ni1502-3                   0
+hds_usecol:ni1503-2_time:1.0                139.33 hds_usecol:ni1503-2                   1
+hds_usecol:ni1503-3_time:1.0                139.31 hds_usecol:ni1503-3                   1
+hds_usecol:ni1504-2_time:1.0               138.389 hds_usecol:ni1504-2                   0
+hds_usecol:ni1504-3_time:1.0                138.39 hds_usecol:ni1504-3                   0
+hds_usecol:ni1505-1_time:1.0               138.085 hds_usecol:ni1505-1                   0
+hds_usecol:ni1505-2_time:1.0               138.078 hds_usecol:ni1505-2                   0
+hds_usecol:ni1505-3_time:1.0               138.072 hds_usecol:ni1505-3                   0
+hds_usecol:ni1506-1_time:1.0               138.025 hds_usecol:ni1506-1                   0
+hds_usecol:ni1506-2_time:1.0               138.015 hds_usecol:ni1506-2                   0
+hds_usecol:ni1506-3_time:1.0               138.005 hds_usecol:ni1506-3                   0
+hds_usecol:ni1507-2_time:1.0               137.681 hds_usecol:ni1507-2                   0
+hds_usecol:ni1507-3_time:1.0               137.676 hds_usecol:ni1507-3                   0
+hds_usecol:ni1601-1_time:1.0               135.885 hds_usecol:ni1601-1                   0
+hds_usecol:ni1601-2_time:1.0                 137.9 hds_usecol:ni1601-2                   1
+hds_usecol:ni1601-3_time:1.0                137.87 hds_usecol:ni1601-3                   1
+hds_usecol:ni1602-1_time:1.0               134.829 hds_usecol:ni1602-1                   0
+hds_usecol:ni1602-2_time:1.0                 134.9 hds_usecol:ni1602-2                   1
+hds_usecol:ni1603-1_time:1.0               135.045 hds_usecol:ni1603-1                   0
+hds_usecol:ni1603-2_time:1.0               135.104 hds_usecol:ni1603-2                   0
+hds_usecol:ni1604-1_time:1.0               136.477 hds_usecol:ni1604-1                   0
+hds_usecol:ni1604-3_time:1.0               136.483 hds_usecol:ni1604-3                   0
+hds_usecol:ni1605b-1_time:1.0              136.785hds_usecol:ni1605b-1                   0
+hds_usecol:ni1605b-3_time:1.0              136.798hds_usecol:ni1605b-3                   0
+hds_usecol:ni1606-1_time:1.0               134.473 hds_usecol:ni1606-1                   0
+hds_usecol:ni1606-2_time:1.0                134.51 hds_usecol:ni1606-2                   0
+hds_usecol:ni1606-3_time:1.0               134.515 hds_usecol:ni1606-3                   0
+hds_usecol:ni1607-1_time:1.0               135.347 hds_usecol:ni1607-1                   0
+hds_usecol:ni1607-2_time:1.0               135.337 hds_usecol:ni1607-2                   0
+hds_usecol:ni1607-3_time:1.0               135.336 hds_usecol:ni1607-3                   0
+hds_usecol:ni1608-1_time:1.0               135.168 hds_usecol:ni1608-1                   0
+hds_usecol:ni1608-2_time:1.0               135.203 hds_usecol:ni1608-2                   0
+hds_usecol:ni1608-3_time:1.0               135.211 hds_usecol:ni1608-3                   0
+hds_usecol:ni1609-2_time:1.0               135.302 hds_usecol:ni1609-2                   0
+hds_usecol:ni1609-3_time:1.0               135.298 hds_usecol:ni1609-3                   0
+hds_usecol:ni1610-2_time:1.0               135.323 hds_usecol:ni1610-2                   0
+hds_usecol:ni1611-1_time:1.0               135.456 hds_usecol:ni1611-1                   0
+hds_usecol:ni1612-1_time:1.0               135.019 hds_usecol:ni1612-1                   0
+hds_usecol:ni1612-2_time:1.0               135.092 hds_usecol:ni1612-2                   0
+hds_usecol:ni1613-1_time:1.0               135.057 hds_usecol:ni1613-1                   0
+hds_usecol:ni1701-1_time:1.0               135.482 hds_usecol:ni1701-1                   0
+hds_usecol:ni1702-1_time:1.0               135.477 hds_usecol:ni1702-1                   0
+hds_usecol:ni1703-1_time:1.0               135.438 hds_usecol:ni1703-1                   0
+hds_usecol:ni1703-2_time:1.0               135.417 hds_usecol:ni1703-2                   0
+hds_usecol:ni1704-1_time:1.0               133.919 hds_usecol:ni1704-1                   0
+hds_usecol:ni1704-2_time:1.0               133.913 hds_usecol:ni1704-2                   0
+hds_usecol:ni1705-1_time:1.0               134.081 hds_usecol:ni1705-1                   0
+hds_usecol:ni1705-2_time:1.0               134.063 hds_usecol:ni1705-2                   0
+hds_usecol:ni1706-1_time:1.0               134.156 hds_usecol:ni1706-1                   0
+hds_usecol:ni1706-2_time:1.0               134.157 hds_usecol:ni1706-2                   0
+hds_usecol:ni1707-1_time:1.0               134.045 hds_usecol:ni1707-1                   0
+hds_usecol:ni1708-1_time:1.0               136.274 hds_usecol:ni1708-1                   0
+hds_usecol:ni1709-1_time:1.0               137.158 hds_usecol:ni1709-1                   0
+hds_usecol:ni1711-1_time:1.0                136.49 hds_usecol:ni1711-1                   0
+hds_usecol:ni1712-1_time:1.0               135.643 hds_usecol:ni1712-1                   0
+hds_usecol:ni1801-1_time:1.0               133.859 hds_usecol:ni1801-1                   0
+hds_usecol:ni1801-3_time:1.0               133.883 hds_usecol:ni1801-3                   0
+hds_usecol:ni1802-1_time:1.0               133.929 hds_usecol:ni1802-1                   0
+hds_usecol:ni1803-1_time:1.0               133.963 hds_usecol:ni1803-1                   0
+hds_usecol:ni1803-3_time:1.0               133.968 hds_usecol:ni1803-3                   0
+hds_usecol:ni1804-1_time:1.0               134.025 hds_usecol:ni1804-1                   0
+hds_usecol:ni1804-3_time:1.0               134.018 hds_usecol:ni1804-3                   0
+
+
+
+Prior information
+
+   no prior information provided
+
+
+
+PEST SVD Information
+    maxsing = 10000000
+    eigthresh = 1e-06
+
+
+
+
+
+
+  ---  initializing  ---  
+
+  ---  'noptmax'=0, running control file parameter values and quitting  ---  
+...running control file parameter values
+...saving results from control file parameter value run to  hagfors.obs.csv
+
+  ---  control file parameter phi report:  ---  
+       phi type           mean            std            min            max
+       measured        16.0763              0        16.0763        16.0763
+         actual        16.0763              0        16.0763        16.0763
+     note: 'measured' phi reported above includes 
+           realizations of measurement noise, 
+           'actual' phi does not.
+
+

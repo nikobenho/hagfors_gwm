@@ -1,0 +1,16 @@
+pest_file,model_file
+npf_k_layer1_gr_inst0_grid.csv.tpl,mult\npf_k_layer1_gr_inst0_grid.csv
+npf_k_layer1_pp_inst0pp.dat.tpl,npf_k_layer1_pp_inst0pp.dat
+npf_k_layer2_gr_inst0_grid.csv.tpl,mult\npf_k_layer2_gr_inst0_grid.csv
+npf_k_layer2_pp_inst0pp.dat.tpl,npf_k_layer2_pp_inst0pp.dat
+npf_k_layer3_gr_inst0_grid.csv.tpl,mult\npf_k_layer3_gr_inst0_grid.csv
+npf_k_layer3_pp_inst0pp.dat.tpl,npf_k_layer3_pp_inst0pp.dat
+npf_k33_layer1_gr_inst0_grid.csv.tpl,mult\npf_k33_layer1_gr_inst0_grid.csv
+npf_k33_layer1_pp_inst0pp.dat.tpl,npf_k33_layer1_pp_inst0pp.dat
+npf_k33_layer2_gr_inst0_grid.csv.tpl,mult\npf_k33_layer2_gr_inst0_grid.csv
+npf_k33_layer2_pp_inst0pp.dat.tpl,npf_k33_layer2_pp_inst0pp.dat
+npf_k33_layer3_gr_inst0_grid.csv.tpl,mult\npf_k33_layer3_gr_inst0_grid.csv
+npf_k33_layer3_pp_inst0pp.dat.tpl,npf_k33_layer3_pp_inst0pp.dat
+rcha_recharge_1_gr_inst0_grid.csv.tpl,mult\rcha_recharge_1_gr_inst0_grid.csv
+rcha_recharge_1_pp_inst0pp.dat.tpl,rcha_recharge_1_pp_inst0pp.dat
+sfr_rhk_inst0_grid.csv.tpl,mult\sfr_rhk_inst0_grid.csv

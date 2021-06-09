@@ -1,0 +1,16 @@
+,org_file,model_file,use_cols,index_cols,fmt,sep,head_rows,upper_bound,lower_bound,mlt_file,zone_file,fac_file,pp_file,pp_fill_value,pp_lower_limit,pp_upper_limit,zero_based
+0,org\hagfors.npf_k_layer1.txt,hagfors.npf_k_layer1.txt,,,free,,0,1e+30,-1e+30,mult\npf_k_layer1_gr_inst0_grid.csv,npf_k_layer1_gr_inst0_grid.csv.zone,,,,,,False
+1,org\hagfors.npf_k_layer1.txt,hagfors.npf_k_layer1.txt,,,free,,0,1e+30,-1e+30,mult\npf_k_layer1_pp_inst0_pilotpoints.csv,npf_k_layer1_pp_inst0pp.dat.zone,npf_k_layer1_pp_inst0pp.fac,npf_k_layer1_pp_inst0pp.dat,1.0,1e-10,10000000000.0,False
+2,org\hagfors.npf_k_layer2.txt,hagfors.npf_k_layer2.txt,,,free,,0,1e+30,-1e+30,mult\npf_k_layer2_gr_inst0_grid.csv,npf_k_layer2_gr_inst0_grid.csv.zone,,,,,,False
+3,org\hagfors.npf_k_layer2.txt,hagfors.npf_k_layer2.txt,,,free,,0,1e+30,-1e+30,mult\npf_k_layer2_pp_inst0_pilotpoints.csv,npf_k_layer2_pp_inst0pp.dat.zone,npf_k_layer1_pp_inst0pp.fac,npf_k_layer2_pp_inst0pp.dat,1.0,1e-10,10000000000.0,False
+4,org\hagfors.npf_k_layer3.txt,hagfors.npf_k_layer3.txt,,,free,,0,1e+30,-1e+30,mult\npf_k_layer3_gr_inst0_grid.csv,npf_k_layer3_gr_inst0_grid.csv.zone,,,,,,False
+5,org\hagfors.npf_k_layer3.txt,hagfors.npf_k_layer3.txt,,,free,,0,1e+30,-1e+30,mult\npf_k_layer3_pp_inst0_pilotpoints.csv,npf_k_layer3_pp_inst0pp.dat.zone,npf_k_layer1_pp_inst0pp.fac,npf_k_layer3_pp_inst0pp.dat,1.0,1e-10,10000000000.0,False
+6,org\hagfors.npf_k33_layer1.txt,hagfors.npf_k33_layer1.txt,,,free,,0,1e+30,-1e+30,mult\npf_k33_layer1_gr_inst0_grid.csv,npf_k33_layer1_gr_inst0_grid.csv.zone,,,,,,False
+7,org\hagfors.npf_k33_layer1.txt,hagfors.npf_k33_layer1.txt,,,free,,0,1e+30,-1e+30,mult\npf_k33_layer1_pp_inst0_pilotpoints.csv,npf_k33_layer1_pp_inst0pp.dat.zone,npf_k_layer1_pp_inst0pp.fac,npf_k33_layer1_pp_inst0pp.dat,1.0,1e-10,10000000000.0,False
+8,org\hagfors.npf_k33_layer2.txt,hagfors.npf_k33_layer2.txt,,,free,,0,1e+30,-1e+30,mult\npf_k33_layer2_gr_inst0_grid.csv,npf_k33_layer2_gr_inst0_grid.csv.zone,,,,,,False
+9,org\hagfors.npf_k33_layer2.txt,hagfors.npf_k33_layer2.txt,,,free,,0,1e+30,-1e+30,mult\npf_k33_layer2_pp_inst0_pilotpoints.csv,npf_k33_layer2_pp_inst0pp.dat.zone,npf_k_layer1_pp_inst0pp.fac,npf_k33_layer2_pp_inst0pp.dat,1.0,1e-10,10000000000.0,False
+10,org\hagfors.npf_k33_layer3.txt,hagfors.npf_k33_layer3.txt,,,free,,0,1e+30,-1e+30,mult\npf_k33_layer3_gr_inst0_grid.csv,npf_k33_layer3_gr_inst0_grid.csv.zone,,,,,,False
+11,org\hagfors.npf_k33_layer3.txt,hagfors.npf_k33_layer3.txt,,,free,,0,1e+30,-1e+30,mult\npf_k33_layer3_pp_inst0_pilotpoints.csv,npf_k33_layer3_pp_inst0pp.dat.zone,npf_k_layer1_pp_inst0pp.fac,npf_k33_layer3_pp_inst0pp.dat,1.0,1e-10,10000000000.0,False
+12,org\hagfors.rcha_recharge_1.txt,hagfors.rcha_recharge_1.txt,,,free,,0,1e+30,-1e+30,mult\rcha_recharge_1_gr_inst0_grid.csv,rcha_recharge_1_gr_inst0_grid.csv.zone,,,,,,False
+13,org\hagfors.rcha_recharge_1.txt,hagfors.rcha_recharge_1.txt,,,free,,0,1e+30,-1e+30,mult\rcha_recharge_1_pp_inst0_pilotpoints.csv,rcha_recharge_1_pp_inst0pp.dat.zone,npf_k_layer1_pp_inst0pp.fac,rcha_recharge_1_pp_inst0pp.dat,1.0,1e-10,10000000000.0,False
+14,org\hagfors.sfr_packagedata.txt,hagfors.sfr_packagedata.txt,[9],"[0, 1, 2, 3]",free, ,0,[100.0],[0.01],mult\sfr_rhk_inst0_grid.csv,,,,,,,False

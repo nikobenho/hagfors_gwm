@@ -1,0 +1,14 @@
+time,elapsed_seconds,message
+23:06:38,5.56e-05,PEST++ performance logger started
+23:06:38,0.0020158,starting to process control file
+23:06:54,16.2227,finished processing control file
+23:06:55,0.41591,starting basic model IO error checking
+23:06:57,2.15991,finished basic model IO error checking
+23:06:58,1.17654,initializing
+23:06:58,0.266016,'noptmax'=0, running control file parameter values and quitting
+23:06:59,1.2482,running control file parameter values
+23:06:59,6.16e-05,queuing 1 runs
+23:07:01,1.52562,making runs
+23:07:32,30.6773,processing runs
+23:07:32,0.358436,saving results from control file parameter value run to  hagfors.obs.csv
+23:07:32,0.0021716,control file parameter phi report:

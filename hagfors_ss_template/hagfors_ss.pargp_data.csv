@@ -1,0 +1,16 @@
+pargpnme,inctyp,derinc,derinclb,forcen,derincmul,dermthd,splitthresh,splitreldiff,splitaction
+rcha_recharge_1_gr__multiplier,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k33_layer3_gr__multiplier,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k_layer1_gr__multiplier,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k33_layer2_gr__multiplier,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k_layer3_gr__multiplier,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k33_layer1_gr__multiplier,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k_layer2_gr__multiplier,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+sfr_rhk,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k33_layer2_pp_inst:0,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k_layer3_pp_inst:0,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k33_layer1_pp_inst:0,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k33_layer3_pp_inst:0,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k_layer2_pp_inst:0,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+rcha_recharge_1_pp_inst:0,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
+npf_k_layer1_pp_inst:0,relative,0.01,0.0,switch,2.0,parabolic,1e-05,0.5,smaller
