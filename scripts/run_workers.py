@@ -14,7 +14,7 @@ template_name = 'hagfors_ss_template' # Change this to whatever template is bein
 pst_filename = 'hagfors.pst' # Change this to whatever pest-file is being used
 t_d = os.path.join('..', template_name) # Template directory
 num_workers = 20 # Number of local workers
-ip_adress = '130.235.155.203'
+ip_adress = os.environ['MODEL_MASTER'] # This is passed through the SBATCH script (printed from run_master.py)
 
 ### END SETTINGS ###
 
