@@ -1,5 +1,8 @@
 hagfors_flopy_prep/*
 temp_ss_pst_from/*
+hagfors_ss_template/*
 master_ss/*
 worker_0/*
 worker_1/*
+hpc_prep/*
+hpc_prep.zip
