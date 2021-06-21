@@ -1,0 +1,5 @@
+This folder contain the following:
+  1. Excel spreadsheets used to setup observations of simulated model output [notebook 1_Flopy_model_prep.ipynb](https://github.com/nikobenho/hagfors_gwm/tree/main/notebooks/https://github.com/nikobenho/hagfors_gwm/blob/main/notebooks/1_Flopy_model_prep.ipynb):
+    - obs_flow_and_stage.xlsx - observations of simulated flow and simulated stage (SFR), creek Örbäcken, layer 1
+    - obs_head_per_layer.xlsx - observations of simulated head in all three layers, at locations where measured counterparts exist (monitoring wells)
+  2. heads_june16_steadystate.xslx - measured heads (June 2016) in a number of wells used as calibration targets in a previous modeling study of the site. This is included in order to provide a means to compare history-matching strategies (previous structurally complex approach vs present highly parameterized approach)
