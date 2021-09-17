@@ -1,0 +1,53 @@
+ Variables used by LUMPREM
+ 
+* earth properties
+
+  MAXVOL                      0.5000000    
+  IRRIGVOLFRAC                 0.000000    
+  RDELAY                       5.000000    
+  MDELAY                       1.000000    
+  KS                           43.20000    
+  M                           0.5000000    
+  L                           0.5000000    
+
+* volume to elevation
+
+  OFFSET                       136.0000    
+  FACTOR1                      30.00000    
+  FACTOR2                      20.00000    
+  POWER                        2.000000    
+  ELEVMIN                     -9999.000    
+  ELEVMAX                      9999.000    
+
+* topographic surface
+
+  SURFACE                      152.2000    
+
+ * initial conditions
+
+  VOL                         7.0000000E-02
+  NRBUF                          1
+  NMBUF                          1
+  RBUF --->
+    0.000000    
+  MBUF --->
+    0.000000    
+
+* timing information
+
+  NUMDAYS                     1461
+  NOUTDAYS                     100
+  OUTDAY --->
+    14    29    43    58    73    87   102   116   131   146   160   175   189   204   219   233   248   262   277   292   306   321   336   350   365   379   394   409   423   438
+   452   467   482   496   511   525   540   555   569   584   599   613   628   642   657   672   686   701   715   730   745   759   774   788   803   818   832   847   861   876
+   891   905   920   935   949   964   978   993  1008  1022  1037  1051  1066  1081  1095  1110  1124  1139  1154  1168  1183  1198  1212  1227  1241  1256  1271  1285  1300  1314
+  1329  1344  1358  1373  1387  1402  1417  1431  1446  1461
+
+* data filenames
+
+  CROPFAC_ALL                 0.8000000    
+  GAMMA_ALL                    1.000000    
+  RAINFILE                   rainfall.dat
+  EPOTFILE                   evapot.dat
+  IRRIGCODE_ALL                  0
+  GWIRRIGFRAC_ALL              0.000000    
