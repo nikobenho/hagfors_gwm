@@ -1,10 +1,10 @@
-READ_LUMPREM_OUTPUT_FILE lr_hagfors.out 1
+READ_LUMPREM_OUTPUT_FILE lr_lu1.out 1
 #  my_name     LUMPREM_name      divide_by_delta_t?
 
-	rch_hagfors		net_recharge		div_delta_t
+	rch_lu1		net_recharge		div_delta_t
 
 
 WRITE_MF6_TIME_SERIES_FILE rch.ts 1  
 #	ts_name		scale		offset		mf6method		time_offset_method
 
-	rch_hagfors		1		0		linearend		#hagfors
+	rch_lu1		1		0		linearend		#lu1

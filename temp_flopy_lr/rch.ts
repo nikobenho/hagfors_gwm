@@ -1,5 +1,5 @@
 BEGIN ATTRIBUTES
-   NAME rch_hagfors
+   NAME rch_lu1
    METHOD LINEAREND
 END ATTRIBUTES
  
