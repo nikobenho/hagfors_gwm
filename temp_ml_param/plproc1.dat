@@ -1,0 +1,92 @@
+
+### Read model grid ###
+cl_mf = read_mf6_grid_specs(file=experimental.disv.grb,    &
+                            dimensions=3,                  &
+                            slist_idomain = idomain,       &
+                            slist_layernum = layer,        &
+                            plist_bottom = bottom) # Is bottom needed?
+
+### Read pilot-points file ###
+cl_pp = read_list_file(file=pp3d_coarse.dat,               &
+                       id_type=character,                  &
+                       dimensions=3,                       &
+                       slist=zone; col=5,                  &
+                       slist=lyr; col=7,                   &
+                       plist=kh_pp; col=8,                 &
+                       plist=kv_pp; col=9,                 &
+                       plist=sy_pp; col=10,                &
+                       plist=ss_pp; col=11)
+
+
+### Create CLIST partitions so that the function "write_model_input_file" writes ###
+### a MODFLOW readable parameter file with the same length as                    ### 
+### experimental.npf_k_layer1.txt                                                ###
+### Is this the proper way to go about it?                                       ###
+cl_mf_layer1 = cl_mf.partition_by_eqn(select=(layer==1))
+cl_mf_layer2 = cl_mf.partition_by_eqn(select=(layer==2))
+cl_mf_layer3 = cl_mf.partition_by_eqn(select=(layer==3))
+
+
+### Calculate kriging factors for each CLIST partition ###
+### If creating partitions is wrong, then this will be ###
+### wrong as well...                                   ###
+calc_kriging_factors_3d(target_clist=cl_mf_layer1,                   &
+                        source_clist=cl_pp,                          &
+                        file=ppfactors1.dat,                         &
+                        variogram=exponential,                       &
+                        a_hmax=32, a_hmin=28, a_vert=8,              &
+                        ang1=60, ang2=20, ang3=0,                    &
+                        kriging=ordinary,                            &
+                        search_rad_max_hdir=130,                     &
+                        search_rad_min_hdir=66,                      &
+                        search_rad_vert=33,                          &
+                        min_points=1,max_points=10)
+
+calc_kriging_factors_3d(target_clist=cl_mf_layer2,                   &
+                        source_clist=cl_pp,                          &
+                        file=ppfactors2.dat,                         &
+                        variogram=exponential,                       &
+                        a_hmax=32, a_hmin=28, a_vert=8,              &
+                        ang1=60, ang2=20, ang3=0,                    &
+                        kriging=ordinary,                            &
+                        search_rad_max_hdir=130,                     &
+                        search_rad_min_hdir=66,                      &
+                        search_rad_vert=33,                          &
+                        min_points=1,max_points=10)
+
+calc_kriging_factors_3d(target_clist=cl_mf_layer3,                   &
+                        source_clist=cl_pp,                          &
+                        file=ppfactors3.dat,                         &
+                        variogram=exponential,                       &
+                        a_hmax=32, a_hmin=28, a_vert=8,              &
+                        ang1=60, ang2=20, ang3=0,                    &
+                        kriging=ordinary,                            &
+                        search_rad_max_hdir=130,                     &
+                        search_rad_min_hdir=66,                      &
+                        search_rad_vert=33,                          &
+                        min_points=1,max_points=10)
+
+### Write  ###
+prop_mf_l1=new_plist(reference_clist=cl_mf_layer1, value=1.0)
+prop_mf_l2=new_plist(reference_clist=cl_mf_layer2, value=1.0)
+prop_mf_l3=new_plist(reference_clist=cl_mf_layer3, value=1.0)
+
+### Write kh layer 1 ###
+prop_mf_l1=86.4
+prop_mf_l1=kh_pp.krige_using_file(file='ppfactors1.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array_l1.tpl, model_input_file=experimental.npf_k_layer1.txt)
+
+### Write kh layer 2 ###
+prop_mf_l2=1.0E-2
+prop_mf_l2=kh_pp.krige_using_file(file='ppfactors2.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array_l2.tpl, model_input_file=experimental.npf_k_layer2.txt)
+
+### Write kh layer 3 ###
+prop_mf_l3=63.2
+prop_mf_l3=kh_pp.krige_using_file(file='ppfactors3.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array_l3.tpl, model_input_file=experimental.npf_k_layer3.txt)
+
+### Write reports ###
+report_all_entities(file=report1.dat)
+cl_mf.report_dependent_lists(file='report2.dat')
+
