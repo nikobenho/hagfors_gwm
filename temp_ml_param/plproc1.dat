@@ -1,15 +1,18 @@
 
 ### Read model grid ###
-cl_mf = read_mf6_grid_specs(file=experimental.disv.grb,    &
-                            dimensions=3,                  &
-                            slist_idomain = idomain,       &
-                            slist_layernum = layer,        &
-                            plist_bottom = bottom) # Is bottom needed?
+cl_mf = read_mf6_grid_specs(file=hagfors_1.disv.grb,                  &
+                            dimensions=2,                             &
+                            slist_layer_idomain=idomain1;  layer=1,   &
+                            slist_layer_idomain=idomain2;  layer=2,   &
+                            slist_layer_idomain=idomain3;  layer=3)
 
-### Read pilot-points file ###
+###### --- 3D pps
+
+
+### Read 3D pilot-points file ###
 cl_pp = read_list_file(file=pp3d_coarse.dat,               &
                        id_type=character,                  &
-                       dimensions=3,                       &
+                       dimensions=2,                       &
                        slist=zone; col=5,                  &
                        slist=lyr; col=7,                   &
                        plist=kh_pp; col=8,                 &
@@ -18,75 +21,233 @@ cl_pp = read_list_file(file=pp3d_coarse.dat,               &
                        plist=ss_pp; col=11)
 
 
-### Create CLIST partitions so that the function "write_model_input_file" writes ###
-### a MODFLOW readable parameter file with the same length as                    ### 
-### experimental.npf_k_layer1.txt                                                ###
-### Is this the proper way to go about it?                                       ###
-cl_mf_layer1 = cl_mf.partition_by_eqn(select=(layer==1))
-cl_mf_layer2 = cl_mf.partition_by_eqn(select=(layer==2))
-cl_mf_layer3 = cl_mf.partition_by_eqn(select=(layer==3))
-
-
-### Calculate kriging factors for each CLIST partition ###
-### If creating partitions is wrong, then this will be ###
-### wrong as well...                                   ###
-calc_kriging_factors_3d(target_clist=cl_mf_layer1,                   &
-                        source_clist=cl_pp,                          &
-                        file=ppfactors1.dat,                         &
-                        variogram=exponential,                       &
-                        a_hmax=32, a_hmin=28, a_vert=8,              &
-                        ang1=60, ang2=20, ang3=0,                    &
-                        kriging=ordinary,                            &
-                        search_rad_max_hdir=130,                     &
-                        search_rad_min_hdir=66,                      &
-                        search_rad_vert=33,                          &
-                        min_points=1,max_points=10)
-
-calc_kriging_factors_3d(target_clist=cl_mf_layer2,                   &
-                        source_clist=cl_pp,                          &
-                        file=ppfactors2.dat,                         &
-                        variogram=exponential,                       &
-                        a_hmax=32, a_hmin=28, a_vert=8,              &
-                        ang1=60, ang2=20, ang3=0,                    &
-                        kriging=ordinary,                            &
-                        search_rad_max_hdir=130,                     &
-                        search_rad_min_hdir=66,                      &
-                        search_rad_vert=33,                          &
-                        min_points=1,max_points=10)
-
-calc_kriging_factors_3d(target_clist=cl_mf_layer3,                   &
-                        source_clist=cl_pp,                          &
-                        file=ppfactors3.dat,                         &
-                        variogram=exponential,                       &
-                        a_hmax=32, a_hmin=28, a_vert=8,              &
-                        ang1=60, ang2=20, ang3=0,                    &
-                        kriging=ordinary,                            &
-                        search_rad_max_hdir=130,                     &
-                        search_rad_min_hdir=66,                      &
-                        search_rad_vert=33,                          &
-                        min_points=1,max_points=10)
-
 ### Write  ###
-prop_mf_l1=new_plist(reference_clist=cl_mf_layer1, value=1.0)
-prop_mf_l2=new_plist(reference_clist=cl_mf_layer2, value=1.0)
-prop_mf_l3=new_plist(reference_clist=cl_mf_layer3, value=1.0)
+prop_mf=new_plist(reference_clist=cl_mf,value=1.0)
 
+
+###   Horizontal K   ###
 ### Write kh layer 1 ###
-prop_mf_l1=86.4
-prop_mf_l1=kh_pp.krige_using_file(file='ppfactors1.dat',transform='log')
-write_model_input_file(template_file=gen_mf_array_l1.tpl, model_input_file=experimental.npf_k_layer1.txt)
+prop_mf=86.4
+prop_mf=kh_pp.krige_using_file(file='factors_pp_lyr1.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.npf_k_layer1.txt)
 
 ### Write kh layer 2 ###
-prop_mf_l2=1.0E-2
-prop_mf_l2=kh_pp.krige_using_file(file='ppfactors2.dat',transform='log')
-write_model_input_file(template_file=gen_mf_array_l2.tpl, model_input_file=experimental.npf_k_layer2.txt)
+prop_mf=86.4
+prop_mf=kh_pp.krige_using_file(file='factors_pp_lyr2.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.npf_k_layer2.txt)
 
 ### Write kh layer 3 ###
-prop_mf_l3=63.2
-prop_mf_l3=kh_pp.krige_using_file(file='ppfactors3.dat',transform='log')
-write_model_input_file(template_file=gen_mf_array_l3.tpl, model_input_file=experimental.npf_k_layer3.txt)
+prop_mf=86.4
+prop_mf=kh_pp.krige_using_file(file='factors_pp_lyr3.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.npf_k_layer3.txt)
+
+
+###    Vertical K    ###
+### Write kv layer 1 ###
+prop_mf=8.64
+prop_mf=kv_pp.krige_using_file(file='factors_pp_lyr1.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.npf_k33_layer1.txt)
+
+### Write kv layer 2 ###
+prop_mf=8.64
+prop_mf=kv_pp.krige_using_file(file='factors_pp_lyr2.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.npf_k33_layer2.txt)
+
+### Write kv layer 3 ###
+prop_mf=8.64
+prop_mf=kv_pp.krige_using_file(file='factors_pp_lyr3.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.npf_k33_layer3.txt)
+
+
+
+###      STORAGE     ###
+###        sy        ###
+### Write sy layer 1 ###
+prop_mf=0.2
+prop_mf=sy_pp.krige_using_file(file='factors_pp_lyr1.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.sto_sy_layer1.txt)
+
+
+###        ss        ###
+### Write ss layer 2 ###
+prop_mf=0.000001
+prop_mf=ss_pp.krige_using_file(file='factors_pp_lyr2.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.sto_ss_layer2.txt)
+
+### Write ss layer 3 ###
+prop_mf=0.000001
+prop_mf=ss_pp.krige_using_file(file='factors_pp_lyr3.dat',transform='log')
+write_model_input_file(template_file=gen_mf_array.tpl, model_input_file=hagfors_1.sto_ss_layer3.txt)
+
+
+
+###### --- SFR SEGLISTS
+
+### Read Creek Örbäcken SFR seglist file ###
+sl_sfr = read_segfile(file="sfr_segfile.dat", protocol=table)
+
+
+### Create clist with sl_sfr as its base ###
+cl_sfr_pp = create_clist_from_seglist(seglist=sl_sfr, linkage_type=endpoints, dist_thresh=5.0)
+
+
+### Instruct PLPROC to read the draincond.dat  ###
+### list file to obtain conductance values at  ###
+### pilot points by inserting the following    ###
+### function into the PLPROC script.           ###
+read_list_file(reference_clist='cl_sfr_pp', file='sfr_cond.dat', plist='pp_sfr_cond';column=2)
+
+
+### Instruct PLPROC to build an SLIST of model ###
+### drain cells to which interpolation must    ###
+### take place                                 ###
+
+
+sfr_cells = cl_mf.find_cells_in_lists(file=hagfors_1.sfr_packagedata.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=2, keytext_start='top_of_file', &
+    keytext_end='end_of_file')
+
+
+sfr_cond=new_plist(reference_clist=cl_mf,value=0.0)
+
+
+sfr_cond=pp_sfr_cond.interp_using_file(file=factors_sfr_cells.dat, transform=log)
+
+
+replace_cells_in_lists(                            &
+    old_file=hagfors_1.sfr_packagedata.txt,        &
+    new_file=new_hagfors_1.sfr_packagedata.txt,    &
+    model_type=undefined;nlay=1;ncpl=3090,       &
+    list_col_start=2,                              &
+    keytext_start='top_of_file',                   &
+    keytext_end='bottom_of_file',                  &
+    plist=sfr_cond;column=9;action='replace'    &
+    )
+
+
+
+###### --- GHB SEGLISTS
+
+sl_ghb_red = read_segfile(file="ghb_red_segfile.dat", protocol=table)
+sl_ghb_orange = read_segfile(file="ghb_orange_segfile.dat", protocol=table)
+sl_ghb_yellow = read_segfile(file="ghb_yellow_segfile.dat", protocol=table)
+sl_ghb_limegreen = read_segfile(file="ghb_limegreen_segfile.dat", protocol=table)
+sl_ghb_royalblue = read_segfile(file="ghb_royalblue_segfile.dat", protocol=table)
+sl_ghb_blueviolet = read_segfile(file="ghb_blueviolet_segfile.dat", protocol=table)
+sl_ghb_magenta = read_segfile(file="ghb_magenta_segfile.dat", protocol=table)
+
+cl_ghb_red_pp = create_clist_from_seglist(seglist=sl_ghb_red, linkage_type=endpoints, dist_thresh=5.0)
+cl_ghb_orange_pp = create_clist_from_seglist(seglist=sl_ghb_orange, linkage_type=endpoints, dist_thresh=5.0)
+cl_ghb_yellow_pp = create_clist_from_seglist(seglist=sl_ghb_yellow, linkage_type=endpoints, dist_thresh=5.0)
+cl_ghb_limegreen_pp = create_clist_from_seglist(seglist=sl_ghb_limegreen, linkage_type=endpoints, dist_thresh=5.0)
+cl_ghb_royalblue_pp = create_clist_from_seglist(seglist=sl_ghb_royalblue, linkage_type=endpoints, dist_thresh=5.0)
+cl_ghb_blueviolet_pp = create_clist_from_seglist(seglist=sl_ghb_blueviolet, linkage_type=endpoints, dist_thresh=5.0)
+cl_ghb_magenta_pp = create_clist_from_seglist(seglist=sl_ghb_magenta, linkage_type=endpoints, dist_thresh=5.0)
+
+read_list_file(reference_clist='cl_ghb_red_pp', file='ghb_red_cond.dat', plist='pp_ghb_red_c';column=2)
+read_list_file(reference_clist='cl_ghb_orange_pp', file='ghb_orange_cond.dat', plist='pp_ghb_orange_c';column=2)
+read_list_file(reference_clist='cl_ghb_yellow_pp', file='ghb_yellow_cond.dat', plist='pp_ghb_yellow_c';column=2)
+read_list_file(reference_clist='cl_ghb_limegreen_pp', file='ghb_limegreen_cond.dat', plist='pp_ghb_limegreen_c';column=2)
+read_list_file(reference_clist='cl_ghb_royalblue_pp', file='ghb_royalblue_cond.dat', plist='pp_ghb_royalblue_c';column=2)
+read_list_file(reference_clist='cl_ghb_blueviolet_pp', file='ghb_blueviolet_cond.dat', plist='pp_ghb_blueviolet_c';column=2)
+read_list_file(reference_clist='cl_ghb_magenta_pp', file='ghb_magenta_cond.dat', plist='pp_ghb_magenta_c';column=2)
+
+ghb_red_cells = cl_mf.find_cells_in_lists(file=hagfors_1.ghb_stress_period_data_1.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=1, keytext_start='top_of_file', &
+    keytext_end='2387  ghb_orange')
+
+ghb_orange_cells = cl_mf.find_cells_in_lists(file=hagfors_1.ghb_stress_period_data_1.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=1, keytext_start='2387  ghb_red', &
+    keytext_end='2792  ghb_yellow')
+    
+ghb_yellow_cells = cl_mf.find_cells_in_lists(file=hagfors_1.ghb_stress_period_data_1.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=1, keytext_start='2800  ghb_orange', &
+    keytext_end='2802  ghb_limegreen')
+
+ghb_limegreen_cells = cl_mf.find_cells_in_lists(file=hagfors_1.ghb_stress_period_data_1.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=1, keytext_start='3090  ghb_yellow', &
+    keytext_end='1  ghb_royalblue')
+
+ghb_royalblue_cells = cl_mf.find_cells_in_lists(file=hagfors_1.ghb_stress_period_data_1.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=1, keytext_start='3057  ghb_limegreen', &
+    keytext_end='1  ghb_blueviolet')
+
+ghb_blueviolet_cells = cl_mf.find_cells_in_lists(file=hagfors_1.ghb_stress_period_data_1.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=1, keytext_start='2802  ghb_royalblue', &
+    keytext_end='316  ghb_magenta')
+
+ghb_magenta_cells = cl_mf.find_cells_in_lists(file=hagfors_1.ghb_stress_period_data_1.txt, &
+    model_type=undefined;nlay=1;ncpl=3090, list_col_start=1, keytext_start='316  ghb_blueviolet', &
+    keytext_end='end_of_file')
+
+
+ghb_cond=new_plist(reference_clist=cl_mf,value=0.0)
+
+
+## --- GHB Red
+ghb_cond=pp_ghb_red_c.interp_using_file(file=factors_ghb_red_cells.dat, transform=log)
+
+replace_cells_in_lists(old_file=hagfors_1.ghb_stress_period_data_1.txt,                                &
+    new_file=partial1_hagfors_1.ghb_stress_period_data_1.txt, model_type=undefined;nlay=1;ncpl=3090, &
+    list_col_start=1, keytext_start='top_of_file', keytext_end='2387  ghb_orange',                     &
+    plist=ghb_cond;column=4;action='replace')
+
+
+## --- GHB Orange
+ghb_cond=pp_ghb_orange_c.interp_using_file(file=factors_ghb_orange_cells.dat, transform=log)
+
+replace_cells_in_lists(old_file=partial1_hagfors_1.ghb_stress_period_data_1.txt,                       &
+    new_file=partial2_hagfors_1.ghb_stress_period_data_1.txt, model_type=undefined;nlay=1;ncpl=3090, &
+    list_col_start=1, keytext_start='2387  ghb_red', keytext_end='2792  ghb_yellow',                   &
+    plist=ghb_cond;column=4;action='replace')
+
+
+## --- GHB Yellow
+ghb_cond=pp_ghb_yellow_c.interp_using_file(file=factors_ghb_yellow_cells.dat, transform=log)
+
+replace_cells_in_lists(old_file=partial2_hagfors_1.ghb_stress_period_data_1.txt,                       &
+    new_file=partial3_hagfors_1.ghb_stress_period_data_1.txt, model_type=undefined;nlay=1;ncpl=3090, &
+    list_col_start=1, keytext_start='2800  ghb_orange', keytext_end='2802  ghb_limegreen',             &
+    plist=ghb_cond;column=4;action='replace')
+
+
+## --- GHB Limegreen
+ghb_cond=pp_ghb_limegreen_c.interp_using_file(file=factors_ghb_limegreen_cells.dat, transform=log)
+
+replace_cells_in_lists(old_file=partial3_hagfors_1.ghb_stress_period_data_1.txt,                       &
+    new_file=partial4_hagfors_1.ghb_stress_period_data_1.txt, model_type=undefined;nlay=1;ncpl=3090, &
+    list_col_start=1, keytext_start='3090  ghb_yellow', keytext_end='1  ghb_royalblue',                &
+    plist=ghb_cond;column=4;action='replace')
+
+
+## --- GHB Royalblue
+ghb_cond=pp_ghb_royalblue_c.interp_using_file(file=factors_ghb_royalblue_cells.dat, transform=log)
+
+replace_cells_in_lists(old_file=partial4_hagfors_1.ghb_stress_period_data_1.txt,                       &
+    new_file=partial5_hagfors_1.ghb_stress_period_data_1.txt, model_type=undefined;nlay=1;ncpl=3090, &
+    list_col_start=1, keytext_start='3057  ghb_limegreen', keytext_end='1  ghb_blueviolet',            &
+    plist=ghb_cond;column=4;action='replace')
+
+
+## --- GHB Blueviolet
+ghb_cond=pp_ghb_blueviolet_c.interp_using_file(file=factors_ghb_blueviolet_cells.dat, transform=log)
+
+replace_cells_in_lists(old_file=partial5_hagfors_1.ghb_stress_period_data_1.txt,                       &
+    new_file=partial6_hagfors_1.ghb_stress_period_data_1.txt, model_type=undefined;nlay=1;ncpl=3090, &
+    list_col_start=1, keytext_start='2802  ghb_royalblue', keytext_end='316  ghb_magenta',             &
+    plist=ghb_cond;column=4;action='replace')
+
+
+## --- GHB Magenta
+ghb_cond=pp_ghb_magenta_c.interp_using_file(file=factors_ghb_magenta_cells.dat, transform=log)
+
+replace_cells_in_lists(old_file=partial6_hagfors_1.ghb_stress_period_data_1.txt,                       &
+    new_file=new_hagfors_1.ghb_stress_period_data_1.txt, model_type=undefined;nlay=1;ncpl=3090,      &
+    list_col_start=1, keytext_start='316  ghb_blueviolet', keytext_end='end_of_file',                  &
+    plist=ghb_cond;column=4;action='replace')
 
 ### Write reports ###
 report_all_entities(file=report1.dat)
 cl_mf.report_dependent_lists(file='report2.dat')
+#cl_sfrpp.report_dependent_lists(file='report3.dat')
 
