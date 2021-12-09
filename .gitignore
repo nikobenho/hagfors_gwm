@@ -5,6 +5,7 @@ experimental_ppoints/*
 hagfors_ss_template/*
 temp_ss_pst_from/*
 temp_ml_param/*
+temp_lr_prep/*
 temp_flopy_lumprem/*
 master_ss/*
 worker_0/*
