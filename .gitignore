@@ -4,9 +4,11 @@ hagfors_flopy_prep/*
 experimental_ppoints/*
 hagfors_ss_template/*
 temp_ss_pst_from/*
-temp_ml_param/*
 temp_lr_prep/*
 temp_flopy_lumprem/*
+temp_ml_param/*
+temp_ml_obs/*
+temp_ml_calib/*
 master_ss/*
 worker_0/*
 worker_1/*
