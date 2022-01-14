@@ -1,0 +1,35 @@
+2021-12-22 22:07:34.422461 starting: opening PstFrom.log for logging
+2021-12-22 22:07:34.423459 starting PstFrom process
+2021-12-22 22:07:34.424456 starting: setting up dirs
+2021-12-22 22:07:34.425455 starting: removing existing new_d '..\hagfors_1_template'
+2021-12-22 22:07:34.476172 finished: removing existing new_d '..\hagfors_1_template' took: 0:00:00.050717
+2021-12-22 22:07:34.476172 starting: copying original_d '..\temp_pst_from' to new_d '..\hagfors_1_template'
+2021-12-22 22:07:34.591796 finished: copying original_d '..\temp_pst_from' to new_d '..\hagfors_1_template' took: 0:00:00.115624
+2021-12-22 22:07:34.592793 finished: setting up dirs took: 0:00:00.168337
+2021-12-22 22:08:15.341836 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors_1.npf_k_layer1.txt']
+2021-12-22 22:08:15.344833 starting: loading array ..\hagfors_1_template\hagfors_1.npf_k_layer1.txt
+2021-12-22 22:08:48.972343 starting: adding pilotpoints type multiplier style parameters for file(s) ['hagfors_1.ghb_stress_period_data_1.txt']
+2021-12-22 22:08:48.972802 starting: loading list ..\hagfors_1_template\hagfors_1.ghb_stress_period_data_1.txt
+2021-12-22 22:08:48.973340 starting: reading list ..\hagfors_1_template\hagfors_1.ghb_stress_period_data_1.txt
+2021-12-22 22:08:48.980383 finished: reading list ..\hagfors_1_template\hagfors_1.ghb_stress_period_data_1.txt took: 0:00:00.007043
+2021-12-22 22:08:48.983342 loaded list '..\hagfors_1_template\hagfors_1.ghb_stress_period_data_1.txt' of shape (251, 5)
+2021-12-22 22:08:48.988751 finished: loading list ..\hagfors_1_template\hagfors_1.ghb_stress_period_data_1.txt took: 0:00:00.015949
+2021-12-22 22:08:48.989299 starting: writing list-based template file '..\hagfors_1_template\tpl\ghbr_rhk_inst0_pilotpoints.csv.tpl'
+2021-12-22 22:08:53.435204 starting: adding grid type multiplier style parameters for file(s) ['hagfors_1.sfr_packagedata.txt']
+2021-12-22 22:08:53.435204 starting: loading list ..\hagfors_1_template\hagfors_1.sfr_packagedata.txt
+2021-12-22 22:08:53.436203 starting: reading list ..\hagfors_1_template\hagfors_1.sfr_packagedata.txt
+2021-12-22 22:08:53.445290 finished: reading list ..\hagfors_1_template\hagfors_1.sfr_packagedata.txt took: 0:00:00.009087
+2021-12-22 22:08:53.446175 loaded list '..\hagfors_1_template\hagfors_1.sfr_packagedata.txt' of shape (265, 13)
+2021-12-22 22:08:53.455152 finished: loading list ..\hagfors_1_template\hagfors_1.sfr_packagedata.txt took: 0:00:00.019948
+2021-12-22 22:08:53.455152 starting: writing list-based template file '..\hagfors_1_template\tpl\sfr_rhk_inst0_grid.csv.tpl'
+2021-12-22 22:08:53.497051 finished: writing list-based template file '..\hagfors_1_template\tpl\sfr_rhk_inst0_grid.csv.tpl' took: 0:00:00.041899
+2021-12-22 22:08:53.515991 finished: adding grid type multiplier style parameters for file(s) ['hagfors_1.sfr_packagedata.txt'] took: 0:00:00.080787
+2021-12-22 22:08:58.886603 starting: adding observations from output file ..\temp_pst_from\head.obs.csv
+2021-12-22 22:08:58.887600 starting: adding observations from tabular output file '['..\\temp_pst_from\\head.obs.csv']'
+2021-12-22 22:08:58.888152 starting: reading list ..\hagfors_1_template\..\temp_pst_from\head.obs.csv
+2021-12-22 22:08:58.910539 finished: reading list ..\hagfors_1_template\..\temp_pst_from\head.obs.csv took: 0:00:00.022387
+2021-12-22 22:08:58.911537 starting: building insfile for tabular output file ..\temp_pst_from\head.obs.csv
+2021-12-22 22:08:58.954460 finished: building insfile for tabular output file ..\temp_pst_from\head.obs.csv took: 0:00:00.042923
+2021-12-22 22:08:58.955521 starting: adding observation from instruction file '..\hagfors_1_template\head.csv.ins'
+2021-12-22 22:08:59.053739 finished: adding observation from instruction file '..\hagfors_1_template\head.csv.ins' took: 0:00:00.098218
+2021-12-22 22:08:59.060693 finished: adding observations from tabular output file '['..\\temp_pst_from\\head.obs.csv']' took: 0:00:00.173093

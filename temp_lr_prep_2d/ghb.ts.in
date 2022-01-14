@@ -1,0 +1,38 @@
+READ_LUMPREM_OUTPUT_FILE lr_red.out 1
+#  my_name     LUMPREM_name      divide_by_delta_t?
+
+	ghb_red		elevation		no_div_delta_t
+
+
+READ_LUMPREM_OUTPUT_FILE lr_yellow.out 1
+#  my_name     LUMPREM_name      divide_by_delta_t?
+
+	ghb_yellow		elevation		no_div_delta_t
+
+
+READ_LUMPREM_OUTPUT_FILE lr_green.out 1
+#  my_name     LUMPREM_name      divide_by_delta_t?
+
+	ghb_green		elevation		no_div_delta_t
+
+
+READ_LUMPREM_OUTPUT_FILE lr_blue.out 1
+#  my_name     LUMPREM_name      divide_by_delta_t?
+
+	ghb_blue		elevation		no_div_delta_t
+
+
+READ_LUMPREM_OUTPUT_FILE lr_magenta.out 1
+#  my_name     LUMPREM_name      divide_by_delta_t?
+
+	ghb_magenta		elevation		no_div_delta_t
+
+
+WRITE_MF6_TIME_SERIES_FILE ghb.ts 5  
+#	ts_name		scale		offset		mf6method		time_offset_method
+
+	ghb_red		1		0		linear		#red
+	ghb_yellow		1		0		linear		#yellow
+	ghb_green		1		0		linear		#green
+	ghb_blue		1		0		linear		#blue
+	ghb_magenta		1		0		linear		#magenta
