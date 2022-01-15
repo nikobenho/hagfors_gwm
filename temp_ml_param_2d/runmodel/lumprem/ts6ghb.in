@@ -1,0 +1,28 @@
+
+# Here is a comment
+
+BEGIN FILES
+  FILEIN  ghb.ts
+  FILEOUT ghb_new.ts
+END FILES
+
+BEGIN PARAMETERS
+END PARAMETERS
+
+BEGIN PROCESSING
+
+  avg_red = time_average_over_interval(ghb_red,none,1.0,99999.0)
+  avg_yellow = time_average_over_interval(ghb_yellow,none,1.0,99999.0)
+  avg_green = time_average_over_interval(ghb_green,none,1.0,99999.0)
+  avg_blue = time_average_over_interval(ghb_blue,none,1.0,99999.0)
+  avg_magenta = time_average_over_interval(ghb_magenta,none,1.0,99999.0)
+  
+  ghb_red = assign_terms(ghb_red, avg_red, 0.0, 0.0)
+  ghb_yellow = assign_terms(ghb_yellow, avg_yellow, 0.0, 0.0)
+  ghb_green = assign_terms(ghb_green, avg_green, 0.0, 0.0)
+  ghb_blue = assign_terms(ghb_blue, avg_blue, 0.0, 0.0)
+  ghb_magenta = assign_terms(ghb_magenta, avg_magenta, 0.0, 0.0)
+
+END PROCESSING
+
+
