@@ -12,5 +12,8 @@ temp_ml_calib/*
 master_ss/*
 worker_0/*
 worker_1/*
+2022_01_22_ok_2week_out/*
+2022_01_20_15iter_sfr_rtp_model/*
+2022_01_31_ghbfail/*
 hpc_prep/*
 hpc_prep.zip
