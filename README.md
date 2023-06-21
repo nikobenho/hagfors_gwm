@@ -7,5 +7,5 @@ The `bins` folder contain binaries used for model grid setup, forward runs and h
 
 The `data` folder contain datasets used for defining model boundaries, boundary conditions and history-matching targets.
 
-The `notebooks` folder contain Jupyter Notebooks used for the workflow.
+The `notebooks` folder hold Jupyter Notebooks for the workflow code.
 
