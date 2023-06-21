@@ -1,6 +1,0 @@
-2022-02-02 17:03:51.839668 starting: opening PstFrom.log for logging
-2022-02-02 17:03:51.842656 starting PstFrom process
-2022-02-02 17:03:51.843654 starting: setting up dirs
-2022-02-02 17:03:51.844655 starting: copying original_d '..\temp_pst_from' to new_d '..\hagfors_1_template'
-2022-02-02 17:03:51.978292 finished: copying original_d '..\temp_pst_from' to new_d '..\hagfors_1_template' took: 0:00:00.133637
-2022-02-02 17:03:51.979620 finished: setting up dirs took: 0:00:00.135966
